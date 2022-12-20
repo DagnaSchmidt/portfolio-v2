@@ -3,14 +3,18 @@ import BtnLinks from './components/BtnLinks';
 import './styles/index.css';
 
 function App() {
+  const [mode, setMode] = React.useState(false)
+  function toggle() {
+    setMode(!mode)
+  }
   return (
-    <div className="app">
+    <div className={`app ${mode && "grey-mode"}`}>
         <header className='header'>
             <h1 className='header__logo'>
                 dagna schmidt
             </h1>
-            <button className="btn-round header__btn">
-                <i className='fa-solid fa-moon'></i>
+            <button className={`btn-round header__btn`} id='mode-btn' onClick={toggle}>
+                {mode ? <i className='fa-solid fa-sun'></i> : <i class="fa-solid fa-moon"></i>}
             </button>
             <div className='header__btns'>
                 <BtnLinks
