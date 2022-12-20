@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "xillian";
+  src: url(../fonts/Xillian-Regular.otf) format(opentype);
+}
+@font-face {
+  font-family: "lato";
+  src: url(../fonts/Lato-Black.ttf) format(truetype);
+  src: url(../fonts/Lato-Bold.ttf) format(truetype);
+  src: url(../fonts/Lato-Light.ttf) format(truetype);
+  src: url(../fonts/Lato-Regular.ttf) format(truetype);
+  src: url(../fonts/Lato-Thin.ttf) format(truetype);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  font-family: var(--font-main);
+}
+
+a, button, input, h1, h2, h3, h4, h5, h6, p {
+  all: unset;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-body: #F0EAD8;
+  --color-text: #020E2C;
+  --color-azure-100: #0DB39E;
+  --color-azure-70: #51C4AF;
+  --color-azure-40: #95D4C1;
+  --color-blue-100: #048BA8;
+  --color-blue-70: #4BA8B6;
+  --color-blue-40: #92C4C5;
+  --color-yellow-100: #F7B538;
+  --color-yellow-70: #F5C568;
+  --color-yellow-40: #F3D598;
+  --color-neon-pink-100: #F73668;
+  --color-neon-pink-70: #F56C8A;
+  --color-neon-pink-40: #F3A2AB;
+  --color-pink-100: #F76E7C;
+  --color-pink-70: #F59398;
+  --color-pink-40: #F3B8B3;
+  --color-pale-100: #FF7F75;
+  --color-pale-70: #FA9F93;
+  --color-pale-40: #F6BFB0;
+  --font-main: "lato", sans-serif;
+  --font-secondary: "xillian", sans-serif;
+}
+
+.grey-mode {
+  --color-body: #EAEAEA;
+  --color-azure-100: #7F7F7F;
+  --color-azure-70: #9F9F9F;
+  --color-azure-40: #BFBFBF;
+  --color-blue-100: #666666;
+  --color-blue-70: #8E8E8E;
+  --color-blue-40: #B5B5B5;
+  --color-yellow-100: #BBBBBB;
+  --color-yellow-70: #C9C9C9;
+  --color-yellow-40: #D7D7D7;
+  --color-neon-pink-100: #757575;
+  --color-neon-pink-70: #989898;
+  --color-neon-pink-40: #BBBBBB;
+  --color-pink-100: #999999;
+  --color-pink-70: #B1B1B1;
+  --color-pink-40: #C9C9C9;
+  --color-pale-100: #A4A4A4;
+  --color-pale-70: #B9B9B9;
+  --color-pale-40: #CECECE;
+}/*# sourceMappingURL=index.css.map */
