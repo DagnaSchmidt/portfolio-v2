@@ -22,14 +22,14 @@
     font-size: var(--size-40);
     font-weight: var(--weight-medium);
     color: var(--color-text);
-    line-height: 150%;
+    line-height: 48px;
 }
 @mixin logo-mobile {
     font-family: var(--font-secondary);
     font-size: var(--size-32);
     font-weight: var(--weight-medium);
     color: var(--color-text);
-    line-height: 180%;
+    line-height: 40px;
 }
 @mixin title {
     font-family: var(--font-main);

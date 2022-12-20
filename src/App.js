@@ -4,7 +4,7 @@ import './styles/index.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
         <header className='header'>
             <h1 className='header__logo'>
                 dagna schmidt

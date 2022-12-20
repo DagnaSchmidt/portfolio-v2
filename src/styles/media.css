@@ -1,9 +1,12 @@
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .btn-round {
     width: 44px;
     height: 44px;
   }
   .btn-round i {
     font-size: var(--size-20);
+  }
+  .header__logo {
+    width: 50px;
   }
 }/*# sourceMappingURL=media.css.map */

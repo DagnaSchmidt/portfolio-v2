@@ -1,11 +1,16 @@
 
 //MOBILE
-@media (max-width: 480px) {
-    .btn-round {
-        width: 44px;
-        height: 44px;
-        i {
-            font-size: var(--size-20);
+@media screen and (max-width: 480px) {
+        .btn-round {
+            width: 44px;
+            height: 44px;
+            i {
+                font-size: var(--size-20);
+            }
         }
-    }
+        .header {
+            &__logo {
+                width: 50px;
+            }
+        }
 }
