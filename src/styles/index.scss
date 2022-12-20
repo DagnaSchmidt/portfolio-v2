@@ -20,3 +20,22 @@ ul, li {
     list-style-type: none;
 }
 
+//reusable
+.btn-round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-azure-100);
+    border: var(--border-black);
+    i {
+        color: var(--color-black);
+        font-size: var(--size-32);
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: var(--color-azure-70);
+    }
+}
