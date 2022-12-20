@@ -13,8 +13,8 @@ function App() {
             <h1 className='header__logo'>
                 dagna schmidt
             </h1>
-            <button className={`btn-round header__btn`} id='mode-btn' onClick={toggle}>
-                {mode ? <i className='fa-solid fa-sun'></i> : <i class="fa-solid fa-moon"></i>}
+            <button className='btn-round header__btn' id='mode-btn' onClick={toggle}>
+                {mode ? <i className='fa-solid fa-sun'></i> : <i className="fa-solid fa-moon"></i>}
             </button>
             <div className='header__btns'>
                 <BtnLinks
