@@ -39,6 +39,11 @@ ul, li {
         background-color: var(--color-azure-70);
     }
 }
+.btn-exit {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+}
 
 //ACTIVE OVERWRITE
 .about-active {
@@ -133,6 +138,7 @@ ul, li {
             grid-template-columns: repeat(3, 1fr);
             gap: 0;
             overflow: hidden;
+            position: relative;
         }
     }
     .about {
@@ -142,6 +148,11 @@ ul, li {
             background-color: var(--color-pale-70);
         }
     }
+    .about-active {
+        @extend %active;
+        background-color: var(--color-pale-70) !important;
+    }
+
     .skills {
         background-color: var(--color-azure-40);
         &:hover {
@@ -182,8 +193,17 @@ ul, li {
         &__title {
             @include title-main;
         }
-        &__content {
+        &-active__title {
+            @include title-main;
+            position: absolute;
+            left: 86px;
+            top: 120px;
+        }
+        &-active__content {
             display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
         }
     }
 }

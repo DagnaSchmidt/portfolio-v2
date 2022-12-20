@@ -10,10 +10,10 @@ export default function Portfolio() {
         if(show === true) {setShow(!show)}
     }
     return (
-        <section className={`portfolio ${show && "portfolio-active"}`} onClick={open}>
-            <h2 className="portfolio__title">Portfolio</h2>
-            <div className={`portfolio__content ${show && "display"}`}>
-                <button className="portfolio__exit btn-round" onClick={close}>
+        <section className={show ? "portfolio-active" : "portfolio"} onClick={open}>
+            <h2 className={show ? "portfolio-active__title" : "portfolio__title"}>Portfolio</h2>
+            <div className={`portfolio-active__content ${show && "display"}`}>
+                <button className="portfolio__exit btn-round btn-exit" onClick={close}>
                     <i className="fa-solid fa-xmark"></i>
                 </button>
             </div>
