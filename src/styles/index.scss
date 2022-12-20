@@ -40,6 +40,35 @@ ul, li {
     }
 }
 
+//ACTIVE OVERWRITE
+.about-active {
+    @extend %active;
+    background-color: var(--color-pale-70) !important;
+}
+.contact-active {
+    @extend %active;
+    background-color: var(--color-yellow-70) !important;
+}
+.education-active {
+    @extend %active;
+    background-color: var(--color-neon-pink-70) !important;
+}
+.portfolio-active {
+    @extend %active;
+    background-color: var(--color-pink-70) !important;
+}
+.skills-active {
+    @extend %active;
+    background-color: var(--color-azure-70) !important;
+}
+.work-active {
+    @extend %active;
+    background-color: var(--color-blue-70) !important;
+}
+.display {
+    display: flex !important;
+}
+
 #root {
     width: 100vw;
     height: 100vh;
@@ -74,6 +103,7 @@ ul, li {
             left: 0;
             right: 0;
             text-align: center;
+            z-index: 3;
         }
         &__btn {
             position: absolute;
@@ -82,6 +112,7 @@ ul, li {
             margin-bottom: auto;
             top: 0;
             bottom: 0;
+            z-index: 3;
         }
         &__btns {
             display: flex;
@@ -89,18 +120,23 @@ ul, li {
             position: absolute;
             bottom: -40px;
             right: 52px;
+            z-index: 3;
         }
         &__sections {
+            -moz-border-radius: 80px;
+            -webkit-border-radius: 80px;
+            border-radius: 80px;
+            overflow: hidden;
             width: 100%;
             height: 100%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 0;
+            overflow: hidden;
         }
     }
     .about {
         background-color: var(--color-pale-40);
-        border-radius: 70px 0 0 0;
         &:hover {
             cursor: pointer;
             background-color: var(--color-pale-70);
@@ -115,7 +151,6 @@ ul, li {
     }
     .education {
         background-color: var(--color-neon-pink-40);
-        border-radius: 0 70px 0 0;
         &:hover {
             cursor: pointer;
             background-color: var(--color-neon-pink-70);
@@ -123,7 +158,6 @@ ul, li {
     }
     .work {
         background-color: var(--color-blue-40);
-        border-radius: 0 0 0 70px;
         &:hover {
             cursor: pointer;
             background-color: var(--color-blue-70);
@@ -138,7 +172,6 @@ ul, li {
     }
     .contact {
         background-color: var(--color-yellow-40);
-        border-radius: 0 0 70px 0;
         &:hover {
             cursor: pointer;
             background-color: var(--color-yellow-70);
@@ -148,6 +181,9 @@ ul, li {
         @extend %section;
         &__title {
             @include title-main;
+        }
+        &__content {
+            display: none;
         }
     }
 }
@@ -210,3 +246,4 @@ ul, li {
         }
     }
 }
+

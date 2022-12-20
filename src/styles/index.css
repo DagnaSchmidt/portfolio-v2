@@ -17,6 +17,18 @@
   align-items: center;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+.work-active, .skills-active, .portfolio-active, .education-active, .contact-active, .about-active {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 70px;
+  border: var(--border-black);
+}
+.work-active:hover, .skills-active:hover, .portfolio-active:hover, .education-active:hover, .contact-active:hover, .about-active:hover {
+  cursor: default !important;
 }
 
 :root {
@@ -123,6 +135,34 @@ ul, li {
   background-color: var(--color-azure-70);
 }
 
+.about-active {
+  background-color: var(--color-pale-70) !important;
+}
+
+.contact-active {
+  background-color: var(--color-yellow-70) !important;
+}
+
+.education-active {
+  background-color: var(--color-neon-pink-70) !important;
+}
+
+.portfolio-active {
+  background-color: var(--color-pink-70) !important;
+}
+
+.skills-active {
+  background-color: var(--color-azure-70) !important;
+}
+
+.work-active {
+  background-color: var(--color-blue-70) !important;
+}
+
+.display {
+  display: flex !important;
+}
+
 #root {
   width: 100vw;
   height: 100vh;
@@ -164,6 +204,7 @@ ul, li {
   left: 0;
   right: 0;
   text-align: center;
+  z-index: 3;
 }
 .app .header__btn {
   position: absolute;
@@ -172,6 +213,7 @@ ul, li {
   margin-bottom: auto;
   top: 0;
   bottom: 0;
+  z-index: 3;
 }
 .app .header__btns {
   display: flex;
@@ -179,17 +221,20 @@ ul, li {
   position: absolute;
   bottom: -40px;
   right: 52px;
+  z-index: 3;
 }
 .app .header__sections {
+  border-radius: 80px;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
+  overflow: hidden;
 }
 .app .about {
   background-color: var(--color-pale-40);
-  border-radius: 70px 0 0 0;
 }
 .app .about:hover {
   cursor: pointer;
@@ -204,7 +249,6 @@ ul, li {
 }
 .app .education {
   background-color: var(--color-neon-pink-40);
-  border-radius: 0 70px 0 0;
 }
 .app .education:hover {
   cursor: pointer;
@@ -212,7 +256,6 @@ ul, li {
 }
 .app .work {
   background-color: var(--color-blue-40);
-  border-radius: 0 0 0 70px;
 }
 .app .work:hover {
   cursor: pointer;
@@ -227,7 +270,6 @@ ul, li {
 }
 .app .contact {
   background-color: var(--color-yellow-40);
-  border-radius: 0 0 70px 0;
 }
 .app .contact:hover {
   cursor: pointer;
@@ -239,6 +281,9 @@ ul, li {
   font-weight: var(--weight-medium);
   color: var(--color-text);
   line-height: 125%;
+}
+.app .about__content, .app .skills__content, .app .education__content, .app .work__content, .app .portfolio__content, .app .contact__content {
+  display: none;
 }
 
 @media screen and (max-width: 1023px) {
