@@ -1,1 +1,9 @@
-/*# sourceMappingURL=media.css.map */
+@media (max-width: 480px) {
+  .btn-round {
+    width: 44px;
+    height: 44px;
+  }
+  .btn-round i {
+    font-size: var(--size-20);
+  }
+}/*# sourceMappingURL=media.css.map */
