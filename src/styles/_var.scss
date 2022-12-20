@@ -82,6 +82,15 @@
     line-height: 16px;
 }
 
+%section {
+    border: var(--border-black-half);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --color-black: #000000;
     --color-white: #ffffff;
@@ -125,6 +134,7 @@
 
     --border-black: 6px solid var(--color-black);
     --border-black-mobile: 4px solid var(--color-black);
+    --border-black-half: 3px solid var(--color-black);
 }
 
 .grey-mode {

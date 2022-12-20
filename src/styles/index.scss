@@ -90,6 +90,65 @@ ul, li {
             bottom: -40px;
             right: 52px;
         }
+        &__sections {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+    }
+    .about {
+        background-color: var(--color-pale-40);
+        border-radius: 70px 0 0 0;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-pale-70);
+        }
+    }
+    .skills {
+        background-color: var(--color-azure-40);
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-azure-70);
+        }
+    }
+    .education {
+        background-color: var(--color-neon-pink-40);
+        border-radius: 0 70px 0 0;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-neon-pink-70);
+        }
+    }
+    .work {
+        background-color: var(--color-blue-40);
+        border-radius: 0 0 0 70px;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-blue-70);
+        }
+    }
+    .portfolio {
+        background-color: var(--color-pink-40);
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-pink-70);
+        }
+    }
+    .contact {
+        background-color: var(--color-yellow-40);
+        border-radius: 0 0 70px 0;
+        &:hover {
+            cursor: pointer;
+            background-color: var(--color-yellow-70);
+        }
+    }
+    .about, .skills, .education, .work, .portfolio, .contact {
+        @extend %section;
+        &__title {
+            @include title-main;
+        }
     }
 }
 

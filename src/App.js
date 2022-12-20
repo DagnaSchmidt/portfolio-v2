@@ -1,5 +1,11 @@
 import React from 'react';
+import About from './components/About';
 import BtnLinks from './components/BtnLinks';
+import Contact from './components/Contact';
+import Education from './components/Education';
+import Portfolio from './components/Portfolio';
+import Skills from './components/Skills';
+import Work from './components/Work';
 import './styles/index.css';
 
 function App() {
@@ -29,6 +35,14 @@ function App() {
                     link="https://www.linkedin.com/in/dagna-schmidt-90ba37207/"
                     logo="fa-brands fa-linkedin"
                 />
+            </div>
+            <div className='header__sections'>
+                <About />
+                <Skills />
+                <Education />
+                <Work />
+                <Portfolio />
+                <Contact />
             </div> 
         </header>
     </div>
