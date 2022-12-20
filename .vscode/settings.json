@@ -18,5 +18,10 @@
         "titleBar.inactiveBackground": "#f7366899",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#F73668"
+    "peacock.color": "#F73668",
+    "cSpell.words": [
+        "opentype",
+        "truetype",
+        "xillian"
+    ]
 }

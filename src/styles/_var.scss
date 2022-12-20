@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "xillian";
+    src: url(../fonts/Xillian-Regular.otf) format(opentype);
+}
+@font-face {
+    font-family: "lato";
+    src: url(../fonts/Lato-Black.ttf) format(truetype);
+    src: url(../fonts/Lato-Bold.ttf) format(truetype);
+    src: url(../fonts/Lato-Light.ttf) format(truetype);
+    src: url(../fonts/Lato-Regular.ttf) format(truetype);
+    src: url(../fonts/Lato-Thin.ttf) format(truetype);
+}
+@mixin title-main {
+    font-family: var(--font-secondary);
+    font-size: var(--size-48);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    line-height: 125%;
+}
+@mixin logo {
+    font-family: var(--font-secondary);
+    font-size: var(--size-40);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    line-height: 150%;
+}
+@mixin logo-mobile {
+    font-family: var(--font-secondary);
+    font-size: var(--size-32);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    line-height: 180%;
+}
+@mixin title {
+    font-family: var(--font-main);
+    font-size: var(--size-20);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+    line-height: 24px;
+}
+@mixin body-L-medium {
+    font-family: var(--font-main);
+    font-size: var(--size-18);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    line-height: 22px;
+}
+%body {
+    font-family: var(--font-main);
+    font-size: var(--size-16);
+    color: var(--color-text);
+    line-height: 18px;
+}
+@mixin body-bold {
+    @extend %body;
+    font-weight: var(--weight-bold);
+}
+@mixin body-medium {
+    @extend %body;
+    font-weight: var(--weight-medium);
+}
+@mixin body-regular {
+    @extend %body;
+    font-weight: var(--weight-regular);
+}
+@mixin body-light {
+    @extend %body;
+    font-weight: var(--weight-light);
+}
+@mixin body-S-light {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-light);
+    color: var(--color-text);
+    line-height: 16px;
+}
+@mixin body-mobile-regular {
+    font-family: var(--font-main);
+    font-size: var(--size-12);
+    font-weight: var(--weight-regular);
+    color: var(--color-text);
+    line-height: 16px;
+}
+
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-body: #F0EAD8;
+    --color-text: #020E2C;
+    --color-azure-100: #0DB39E;
+    --color-azure-70: #51C4AF;
+    --color-azure-40: #95D4C1;
+    --color-blue-100: #048BA8;
+    --color-blue-70: #4BA8B6;
+    --color-blue-40: #92C4C5;
+    --color-yellow-100: #F7B538;
+    --color-yellow-70: #F5C568;
+    --color-yellow-40: #F3D598;
+    --color-neon-pink-100: #F73668;
+    --color-neon-pink-70: #F56C8A;
+    --color-neon-pink-40: #F3A2AB;
+    --color-pink-100: #F76E7C;
+    --color-pink-70: #F59398;
+    --color-pink-40: #F3B8B3;
+    --color-pale-100: #FF7F75;
+    --color-pale-70: #FA9F93;
+    --color-pale-40: #F6BFB0;
+
+    --font-main: "lato", sans-serif;
+    --font-secondary: "xillian", sans-serif;
+
+    --size-12: 12px;
+    --size-14: 14px;
+    --size-16: 16px;
+    --size-18: 18px;
+    --size-20: 20px;
+    --size-32: 32px;
+    --size-40: 40px;
+    --size-48: 48px;
+
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+
+    --border-black: 6px solid var(--color-black);
+    --border-black-mobile: 4px solid var(--color-black);
+}
+
+.grey-mode {
+    --color-body: #EAEAEA;
+    --color-azure-100: #7F7F7F;
+    --color-azure-70: #9F9F9F;
+    --color-azure-40: #BFBFBF;
+    --color-blue-100: #666666;
+    --color-blue-70: #8E8E8E;
+    --color-blue-40: #B5B5B5;
+    --color-yellow-100: #BBBBBB;
+    --color-yellow-70: #C9C9C9;
+    --color-yellow-40: #D7D7D7;
+    --color-neon-pink-100: #757575;
+    --color-neon-pink-70: #989898;
+    --color-neon-pink-40: #BBBBBB;
+    --color-pink-100: #999999;
+    --color-pink-70: #B1B1B1;
+    --color-pink-40: #C9C9C9;
+    --color-pale-100: #A4A4A4;
+    --color-pale-70: #B9B9B9;
+    --color-pale-40: #CECECE;
+}
