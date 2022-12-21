@@ -420,6 +420,9 @@ ul, li {
     color: var(--color-text);
     line-height: 16px;
   }
+  .app .header .about__img {
+    padding: 30px;
+  }
 }
 @media screen and (max-width: 768px) {
   .app .header {
@@ -442,6 +445,9 @@ ul, li {
     color: var(--color-text);
     line-height: 16px;
     width: 35%;
+  }
+  .app .header .about__img {
+    padding: 10px;
   }
   .visible {
     width: 100% !important;
@@ -491,6 +497,18 @@ ul, li {
     font-weight: var(--weight-regular);
     color: var(--color-text);
     line-height: 16px;
+  }
+  .app .header .about__container {
+    flex-direction: column;
+    padding: 42px;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+  .app .header .about__short {
+    width: 100%;
+  }
+  .app .header .about__img {
+    width: 80%;
   }
   .app .header .visible {
     padding: 48px !important;

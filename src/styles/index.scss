@@ -297,6 +297,9 @@ ul, li {
                 &__short, &__long {
                     @include body-S-regular;
                 }
+                &__img {
+                    padding: 30px;
+                }
             }
         }
     }
@@ -318,6 +321,9 @@ ul, li {
                 &__short {
                     @include body-mobile-regular;
                     width: 35%;
+                }
+                &__img {
+                    padding: 10px;
                 }
             }
         }
@@ -366,9 +372,21 @@ ul, li {
             .about {
                 border-width: 6px 6px 3px 6px;
                 border-radius: 80px 80px 0 0;
-                    &__long {
-                        @include body-mobile-regular;
-                    }
+                &__long {
+                    @include body-mobile-regular;
+                }
+                &__container {
+                    flex-direction: column;
+                    padding: 42px;
+                    justify-content: flex-end;
+                    gap: 24px;
+                }
+                &__short {
+                    width: 100%;
+                }
+                &__img {
+                    width: 80%;
+                }
             }
             .visible {
                 padding: 48px !important;
