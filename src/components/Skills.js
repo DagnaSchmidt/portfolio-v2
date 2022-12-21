@@ -16,6 +16,9 @@ export default function Skills() {
                 <button className="skills__exit btn-round btn-exit" onClick={close}>
                     <i className="fa-solid fa-xmark"></i>
                 </button>
+                <div className="skills__container">
+
+                </div>
             </div>
         </section>
     )
