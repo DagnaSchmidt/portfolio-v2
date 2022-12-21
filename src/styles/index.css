@@ -16,9 +16,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
 }
 
 .app .about-active, .work-active, .skills-active, .portfolio-active, .education-active, .contact-active, .about-active {
@@ -325,10 +322,27 @@ ul, li {
   .app .header__logo {
     max-width: 260px;
   }
+  .app .header .about__title, .app .header .skills__title, .app .header .education__title, .app .header .work__title, .app .header .portfolio__title, .app .header .contact__title {
+    font-family: var(--font-secondary);
+    font-size: var(--size-40);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    line-height: 48px;
+  }
 }
 @media screen and (max-width: 768px) {
+  .app .header {
+    margin: 0 20px 0 20px;
+  }
   .app .header__logo {
     max-width: 220px;
+  }
+  .app .header .about__title, .app .header .skills__title, .app .header .education__title, .app .header .work__title, .app .header .portfolio__title, .app .header .contact__title {
+    font-family: var(--font-secondary);
+    font-size: var(--size-32);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    line-height: 40px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -339,10 +353,6 @@ ul, li {
   }
   .app .btn-round i {
     font-size: var(--size-20);
-  }
-  .app .header {
-    margin: 0 20px 0 20px;
-    border: var(--border-black-mobile);
   }
   .app .header__logo {
     font-size: var(--size-32);
@@ -361,5 +371,30 @@ ul, li {
     gap: 6px;
     bottom: -22px;
     right: 12px;
+  }
+  .app .header__sections {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .app .header .about {
+    border-width: 6px 6px 3px 6px;
+    border-radius: 80px 80px 0 0;
+  }
+  .app .header .education, .app .header .work, .app .header .portfolio, .app .header .skills {
+    border-width: 3px 6px 3px 6px;
+    border-radius: 0;
+  }
+  .app .header .contact {
+    border-width: 3px 6px 6px 6px;
+    border-radius: 0 0 80px 80px;
+  }
+  .app .header .about-active__title, .app .header .skills-active__title, .app .header .education-active__title, .app .header .work-active__title, .app .header .portfolio-active__title, .app .header .contact-active__title {
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    top: 100px;
+  }
+  .app .header .btn-exit {
+    top: 48px;
+    right: 28px;
   }
 }/*# sourceMappingURL=index.css.map */

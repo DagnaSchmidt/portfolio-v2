@@ -132,9 +132,6 @@ ul, li {
             grid-template-columns: repeat(3, 1fr);
             gap: 0;
             position: relative;
-            &:first-child {
-                
-            }
         }
     }
     .about {
@@ -224,6 +221,11 @@ ul, li {
             &__logo {
                 max-width: 260px;
             }
+            .about, .skills, .education, .work, .portfolio, .contact {
+                &__title {
+                    @include logo;
+                }
+            }
         }
     }
 }
@@ -231,8 +233,14 @@ ul, li {
 @media screen and (max-width: 768px) {
     .app {
         .header {
+            margin: 0 20px 0 20px;
             &__logo {
                 max-width: 220px;
+            }
+            .about, .skills, .education, .work, .portfolio, .contact {
+                &__title {
+                    @include logo-mobile;
+                }
             }
         }
     }
@@ -249,8 +257,6 @@ ul, li {
             }
         }
         .header {
-            margin: 0 20px 0 20px;
-            border: var(--border-black-mobile);
             &__logo {
                 font-size: var(--size-32);
                 line-height: 40px;
@@ -269,7 +275,37 @@ ul, li {
                 bottom: -22px;
                 right: 12px;
             }
+            &__sections {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .about {
+                border-width: 6px 6px 3px 6px;
+                border-radius: 80px 80px 0 0;
+            }
+            .education, .work, .portfolio, .skills {
+                border-width: 3px 6px 3px 6px;
+                border-radius: 0;
+            }
+            .contact {
+                border-width: 3px 6px 6px 6px;
+                border-radius: 0 0 80px 80px;
+            }
+            .about, .skills, .education, .work, .portfolio, .contact {
+                &-active {
+                    &__title {
+                        margin-left: auto; //check!!!!!!!!!!!!!!!
+                        margin-right: auto;
+                        //left: 0;
+                        right: 0;
+                        top: 100px;
+                    }
+                }
+            }
+            .btn-exit {
+                top: 48px;
+                right: 28px;
+            }
         }
-    }
+    } 
 }
 
