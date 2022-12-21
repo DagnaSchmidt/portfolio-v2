@@ -9,6 +9,10 @@ export default function About() {
     function close() {
         if(show === true) {setShow(!show)}
     }
+    const [about, setAbout] = React.useState(false)
+    function toggle() {
+        setAbout(!about)
+    }
     return (
         <section className={show ? "about-active" : "about"} onClick={open}>
             <h2 className={show ? "about-active__title" : "about__title"}>About</h2>
@@ -16,8 +20,8 @@ export default function About() {
                 <button className="about__exit btn-round btn-exit" onClick={close}>
                     <i className="fa-solid fa-xmark"></i>
                 </button>
-                <button className="about__more btn-round">
-
+                <button className={`about__more btn-round ${about && "move"}`} onClick={toggle}>
+                    {about ? <i className='fa-solid fa-arrow-right'></i> : <i className="fa-solid fa-arrow-left"></i>}
                 </button>
                 <div className="about__container">
                     <div className="about__short">
@@ -31,9 +35,16 @@ export default function About() {
                     </div>
                     <img className="about__img" src={require(`../images/portret.png`)} />
                 </div>
-                <p className="about__long">
-
-                </p>
+                <div className={`about__long ${about && "visible"}`}>
+                    <p>My name is Dagna Schmidt, I am 32 years old and have been living in Göteborg, Sweden for just over a year.</p>
+                    <p>During eleven years of living in Warsaw, I was gaining my education and professional experience. 
+                    As a very curious person I have worked and developed in many different fields and professions. 
+                    They all had one thing in common: creating beautiful things that give the user a unique experience.</p>
+                    <p>I am a really meticulous person, with good eye for details and head always full of new ideas, 
+                    in love with never ending process of self developing.</p>
+                    <p>My experience as a professional athlete learned me to perform my best on stressful situations. 
+                    I am also used to have hard to achieve, long-term goals.</p>
+                </div>
             </div>
         </section>
     )
