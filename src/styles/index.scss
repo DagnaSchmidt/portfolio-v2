@@ -70,9 +70,7 @@ ul, li {
     @extend %active;
     background-color: var(--color-blue-70) !important;
 }
-.display {
-    display: flex !important;
-}
+
 
 #root {
     width: 100vw;
@@ -196,17 +194,24 @@ ul, li {
         &__title {
             @include title-main;
         }
-        &-active__title {
-            @include title-main;
-            position: absolute;
-            left: 86px;
-            top: 120px;
-        }
-        &-active__content {
-            display: none;
-            position: absolute;
-            width: 100%;
-            height: 100%;
+        &-active {
+            &__title {
+                @include title-main;
+                position: absolute;
+                left: 86px;
+                top: 120px;
+            }
+            &__content {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                visibility: hidden;
+            }
+            .display {
+                display: flex;
+                visibility: visible;
+            }
         }
     }
 }
