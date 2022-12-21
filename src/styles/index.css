@@ -24,7 +24,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 70px;
+  border-radius: 80px;
   border: var(--border-black);
 }
 .work-active:hover, .skills-active:hover, .portfolio-active:hover, .education-active:hover, .contact-active:hover, .about-active:hover {
