@@ -297,7 +297,7 @@ ul, li {
   justify-self: center;
 }
 .app .about__short {
-  width: 30%;
+  width: 28%;
   font-weight: var(--weight-regular);
   display: flex;
   flex-direction: column;
@@ -413,6 +413,13 @@ ul, li {
     color: var(--color-text);
     line-height: 48px;
   }
+  .app .header .about__short, .app .header .about__long {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-regular);
+    color: var(--color-text);
+    line-height: 16px;
+  }
 }
 @media screen and (max-width: 768px) {
   .app .header {
@@ -427,6 +434,21 @@ ul, li {
     font-weight: var(--weight-medium);
     color: var(--color-text);
     line-height: 40px;
+  }
+  .app .header .about__short {
+    font-family: var(--font-main);
+    font-size: var(--size-12);
+    font-weight: var(--weight-regular);
+    color: var(--color-text);
+    line-height: 16px;
+    width: 35%;
+  }
+  .visible {
+    width: 100% !important;
+    border-radius: 80px !important;
+  }
+  .move {
+    right: 96% !important;
   }
 }
 @media screen and (max-width: 480px) {
@@ -462,6 +484,16 @@ ul, li {
   .app .header .about {
     border-width: 6px 6px 3px 6px;
     border-radius: 80px 80px 0 0;
+  }
+  .app .header .about__long {
+    font-family: var(--font-main);
+    font-size: var(--size-12);
+    font-weight: var(--weight-regular);
+    color: var(--color-text);
+    line-height: 16px;
+  }
+  .app .header .visible {
+    padding: 48px !important;
   }
   .app .header .education, .app .header .work, .app .header .portfolio, .app .header .skills {
     border-width: 3px 6px 3px 6px;

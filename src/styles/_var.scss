@@ -87,6 +87,13 @@
     color: var(--color-text);
     line-height: 16px;
 }
+@mixin body-S-regular {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-regular);
+    color: var(--color-text);
+    line-height: 16px;
+}
 @mixin body-mobile-regular {
     font-family: var(--font-main);
     font-size: var(--size-12);

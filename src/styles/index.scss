@@ -177,7 +177,7 @@ ul, li {
             justify-self: center;
         }
         &__short {
-            width: 30%;
+            width: 28%;
             @include body-regular;
             display: flex;
             flex-direction: column;
@@ -293,6 +293,11 @@ ul, li {
                     @include logo;
                 }
             }
+            .about {
+                &__short, &__long {
+                    @include body-S-regular;
+                }
+            }
         }
     }
 }
@@ -309,7 +314,20 @@ ul, li {
                     @include logo-mobile;
                 }
             }
+            .about {
+                &__short {
+                    @include body-mobile-regular;
+                    width: 35%;
+                }
+            }
         }
+    }
+    .visible {
+        width: 100% !important;
+        border-radius: 80px !important;
+    }
+    .move {
+        right: 96% !important;
     }
 }
 //MOBILE
@@ -348,6 +366,12 @@ ul, li {
             .about {
                 border-width: 6px 6px 3px 6px;
                 border-radius: 80px 80px 0 0;
+                    &__long {
+                        @include body-mobile-regular;
+                    }
+            }
+            .visible {
+                padding: 48px !important;
             }
             .education, .work, .portfolio, .skills {
                 border-width: 3px 6px 3px 6px;
