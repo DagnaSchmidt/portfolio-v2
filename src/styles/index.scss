@@ -207,10 +207,12 @@ ul, li {
                 width: 100%;
                 height: 100%;
                 visibility: hidden;
+                transition: width 4s height 4s;
             }
             .display {
                 display: flex;
                 visibility: visible;
+                transition: width 4s height 4s;
             }
         }
     }
