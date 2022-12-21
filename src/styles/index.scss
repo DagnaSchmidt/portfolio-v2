@@ -38,6 +38,7 @@ ul, li {
         cursor: pointer;
         background-color: var(--color-azure-70);
     }
+    box-shadow: -4px 4px 0px var(--color-black);
 }
 .btn-exit {
     position: absolute;
@@ -139,6 +140,37 @@ ul, li {
         &:hover {
             cursor: pointer;
             background-color: var(--color-pale-70);
+        }
+        &__more {
+            background-color: var(--color-yellow-100);
+            position: absolute;
+            margin-top: auto;
+            margin-bottom: auto;
+            top: 0;
+            bottom: 0;
+            right: -40px;
+            &:hover {
+                background-color: var(--color-yellow-70);
+            }
+        }
+        &__container {
+            padding: 86px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        &__img {
+            width: 50%;
+            padding: 50px;
+            align-self: center;
+            justify-self: center;
+        }
+        &__short {
+            width: 30%;
+            @include body-regular;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
     }
     .about-active {

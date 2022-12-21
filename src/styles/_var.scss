@@ -5,10 +5,22 @@
 @font-face {
     font-family: "lato";
     src: url(../fonts/Lato-Black.ttf) format(truetype);
-    src: url(../fonts/Lato-Bold.ttf) format(truetype);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "lato";
     src: url(../fonts/Lato-Light.ttf) format(truetype);
+    font-weight: 300;
+}
+@font-face {
+    font-family: "lato";
     src: url(../fonts/Lato-Regular.ttf) format(truetype);
-    src: url(../fonts/Lato-Thin.ttf) format(truetype);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "lato";
+    src: url(../fonts/Lato-Bold.ttf) format(truetype);
+    font-weight: 500;
 }
 @mixin title-main {
     font-family: var(--font-secondary);
