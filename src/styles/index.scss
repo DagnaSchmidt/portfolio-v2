@@ -91,8 +91,6 @@ ul, li {
         max-width: 1240px;
         height: 100%;
         max-height: 600px;
-        border: var(--border-black);
-        border-radius: 80px;
         margin: 0 100px 0 100px;
         &__logo {
             @include logo;
@@ -128,21 +126,21 @@ ul, li {
             z-index: 3;
         }
         &__sections {
-            -moz-border-radius: 80px;
-            -webkit-border-radius: 80px;
-            border-radius: 80px;
-            overflow: hidden;
             width: 100%;
             height: 100%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 0;
-            overflow: hidden;
             position: relative;
+            &:first-child {
+                
+            }
         }
     }
     .about {
         background-color: var(--color-pale-40);
+        border-width: 6px 3px 3px 6px;
+        border-radius: 80px 0 0 0;
         &:hover {
             cursor: pointer;
             background-color: var(--color-pale-70);
@@ -150,11 +148,12 @@ ul, li {
     }
     .about-active {
         @extend %active;
-        background-color: var(--color-pale-70) !important;
+        background-color: var(--color-pale-70);
     }
 
     .skills {
         background-color: var(--color-azure-40);
+        border-width: 6px 3px 3px 3px;
         &:hover {
             cursor: pointer;
             background-color: var(--color-azure-70);
@@ -162,6 +161,8 @@ ul, li {
     }
     .education {
         background-color: var(--color-neon-pink-40);
+        border-width: 6px 6px 3px 3px;
+        border-radius: 0 80px 0 0;
         &:hover {
             cursor: pointer;
             background-color: var(--color-neon-pink-70);
@@ -169,6 +170,8 @@ ul, li {
     }
     .work {
         background-color: var(--color-blue-40);
+        border-width: 3px 3px 6px 6px;
+        border-radius: 0 0 0 80px;
         &:hover {
             cursor: pointer;
             background-color: var(--color-blue-70);
@@ -176,6 +179,7 @@ ul, li {
     }
     .portfolio {
         background-color: var(--color-pink-40);
+        border-width: 3px 3px 6px 3px;
         &:hover {
             cursor: pointer;
             background-color: var(--color-pink-70);
@@ -183,6 +187,8 @@ ul, li {
     }
     .contact {
         background-color: var(--color-yellow-40);
+        border-width: 3px 6px 6px 3px;
+        border-radius: 0 0 80px 0;
         &:hover {
             cursor: pointer;
             background-color: var(--color-yellow-70);

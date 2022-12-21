@@ -84,7 +84,8 @@
 }
 
 %section {
-    border: var(--border-black-half);
+    border-color: var(--color-black);
+    border-style: solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,8 +100,9 @@
     height: 100%;
     border-radius: 80px;
     border: var(--border-black);
+    outline: 80px solid var(--color-body);
     &:hover {
-        cursor: default !important;
+        cursor: default;
     }
 }
 

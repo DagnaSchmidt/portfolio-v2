@@ -11,7 +11,8 @@
   src: url(../fonts/Lato-Thin.ttf) format(truetype);
 }
 .app .about, .app .skills, .app .education, .app .work, .app .portfolio, .app .contact {
-  border: var(--border-black-half);
+  border-color: var(--color-black);
+  border-style: solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,9 +27,10 @@
   height: 100%;
   border-radius: 80px;
   border: var(--border-black);
+  outline: 80px solid var(--color-body);
 }
 .work-active:hover, .skills-active:hover, .portfolio-active:hover, .education-active:hover, .contact-active:hover, .about-active:hover {
-  cursor: default !important;
+  cursor: default;
 }
 
 :root {
@@ -188,8 +190,6 @@ ul, li {
   max-width: 1240px;
   height: 100%;
   max-height: 600px;
-  border: var(--border-black);
-  border-radius: 80px;
   margin: 0 100px 0 100px;
 }
 .app .header__logo {
@@ -230,28 +230,28 @@ ul, li {
   z-index: 3;
 }
 .app .header__sections {
-  border-radius: 80px;
-  overflow: hidden;
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  overflow: hidden;
   position: relative;
 }
 .app .about {
   background-color: var(--color-pale-40);
+  border-width: 6px 3px 3px 6px;
+  border-radius: 80px 0 0 0;
 }
 .app .about:hover {
   cursor: pointer;
   background-color: var(--color-pale-70);
 }
 .app .about-active {
-  background-color: var(--color-pale-70) !important;
+  background-color: var(--color-pale-70);
 }
 .app .skills {
   background-color: var(--color-azure-40);
+  border-width: 6px 3px 3px 3px;
 }
 .app .skills:hover {
   cursor: pointer;
@@ -259,6 +259,8 @@ ul, li {
 }
 .app .education {
   background-color: var(--color-neon-pink-40);
+  border-width: 6px 6px 3px 3px;
+  border-radius: 0 80px 0 0;
 }
 .app .education:hover {
   cursor: pointer;
@@ -266,6 +268,8 @@ ul, li {
 }
 .app .work {
   background-color: var(--color-blue-40);
+  border-width: 3px 3px 6px 6px;
+  border-radius: 0 0 0 80px;
 }
 .app .work:hover {
   cursor: pointer;
@@ -273,6 +277,7 @@ ul, li {
 }
 .app .portfolio {
   background-color: var(--color-pink-40);
+  border-width: 3px 3px 6px 3px;
 }
 .app .portfolio:hover {
   cursor: pointer;
@@ -280,6 +285,8 @@ ul, li {
 }
 .app .contact {
   background-color: var(--color-yellow-40);
+  border-width: 3px 6px 6px 3px;
+  border-radius: 0 0 80px 0;
 }
 .app .contact:hover {
   cursor: pointer;
