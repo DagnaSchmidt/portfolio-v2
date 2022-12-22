@@ -22,7 +22,7 @@
   src: url(../fonts/Lato-Bold.ttf) format(truetype);
   font-weight: 500;
 }
-.app .about__long, .app .about__short {
+.app .skills__card__top, .app .about__long, .app .about__short {
   font-family: var(--font-main);
   font-size: var(--size-16);
   color: var(--color-text);
@@ -37,7 +37,7 @@
   align-items: center;
 }
 
-.app .about-active, .work-active, .skills-active, .portfolio-active, .education-active, .contact-active, .about-active {
+.app .skills-active, .app .about-active, .work-active, .portfolio-active, .education-active, .contact-active, .about-active {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -45,7 +45,7 @@
   border: var(--border-black);
   outline: 80px solid var(--color-body);
 }
-.work-active:hover, .skills-active:hover, .portfolio-active:hover, .education-active:hover, .contact-active:hover, .about-active:hover {
+.app .skills-active:hover, .work-active:hover, .portfolio-active:hover, .education-active:hover, .contact-active:hover, .about-active:hover {
   cursor: default;
 }
 
@@ -174,10 +174,6 @@ ul, li {
 
 .portfolio-active {
   background-color: var(--color-pink-70) !important;
-}
-
-.skills-active {
-  background-color: var(--color-azure-70) !important;
 }
 
 .work-active {
@@ -332,6 +328,54 @@ ul, li {
 .app .skills:hover {
   cursor: pointer;
   background-color: var(--color-azure-70);
+}
+.app .skills__container {
+  padding: 86px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 46px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.app .skills__card {
+  display: flex;
+  flex-direction: column;
+  height: 46px;
+  width: 100%;
+  justify-content: space-between;
+}
+.app .skills__card__top {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--weight-regular);
+}
+.app .skills__card__bottom {
+  width: 100%;
+  position: relative;
+}
+.app .skills__card__bottom__bar-percent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  background-color: var(--color-yellow-100);
+  border: var(--border-black-mobile);
+  border-radius: 8px;
+}
+.app .skills__card__bottom__bar-bg {
+  background-color: var(--color-body);
+  border: var(--border-black-half);
+  border-radius: 8px;
+  width: 100%;
+  height: 14px;
+}
+.app .skills-active {
+  background-color: var(--color-azure-70);
+}
+.app .skills-active__content {
+  display: flex;
+  align-items: flex-end;
 }
 .app .education {
   background-color: var(--color-neon-pink-40);
