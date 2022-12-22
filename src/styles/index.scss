@@ -39,34 +39,14 @@ ul, li {
         background-color: var(--color-azure-70);
     }
     box-shadow: -4px 4px 0px var(--color-black);
+    z-index: 3;
 }
 .btn-exit {
     position: absolute;
     right: 60px;
     top: 60px;
 }
-
-//ACTIVE OVERWRITE
-.about-active {
-    @extend %active;
-    background-color: var(--color-pale-70) !important;
-}
-.contact-active {
-    @extend %active;
-    background-color: var(--color-yellow-70) !important;
-}
-.education-active {
-    @extend %active;
-    background-color: var(--color-neon-pink-70) !important;
-}
-.portfolio-active {
-    @extend %active;
-    background-color: var(--color-pink-70) !important;
-}
-.work-active {
-    @extend %active;
-    background-color: var(--color-blue-70) !important;
-}
+ //OVERWRITE///////////////////////
 .visible {
     padding: 86px;
     outline: var(--border-black);
@@ -76,7 +56,7 @@ ul, li {
 .move {
     right: 58% !important;
 }
-
+//////////////////////////////////
 
 #root {
     width: 100vw;
@@ -203,7 +183,6 @@ ul, li {
         @extend %active;
         background-color: var(--color-pale-70);
     }
-
     .skills {
         background-color: var(--color-azure-40);
         border-width: 6px 3px 3px 3px;
@@ -255,12 +234,17 @@ ul, li {
         }
     }
     .skills-active {
+        background-color: var(--color-azure-70); 
+    }
+    .skills-active, .education-active, .work-active, .portfolio-active, .contact-active {
         @extend %active;
-        background-color: var(--color-azure-70);
         &__content {
             display: flex;
             align-items: flex-end;
         }
+    }
+    .education-active {
+        background-color: var(--color-neon-pink-70) !important;
     }
     .education {
         background-color: var(--color-neon-pink-40);
@@ -270,6 +254,44 @@ ul, li {
             cursor: pointer;
             background-color: var(--color-neon-pink-70);
         }
+        &__container {
+            padding: 36px;
+            margin: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        &__card {
+            background-color: var(--color-scroll);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border-radius: 20px;
+            border: var(--border-black-thin);
+            padding: 12px;
+            max-height: 188px;
+            &__profession {
+                @include body-medium;
+                padding-bottom: 26px;
+            }
+            &__school {
+                @include title;
+            }
+            &__place {
+                @include body-light;
+            }
+            &__year {
+                padding-top: 26px;
+                text-align: right;
+                @include body-light;
+            }
+        }
+    }
+    .work-active {
+        background-color: var(--color-blue-70);
     }
     .work {
         background-color: var(--color-blue-40);
@@ -280,6 +302,9 @@ ul, li {
             background-color: var(--color-blue-70);
         }
     }
+    .portfolio-active {
+        background-color: var(--color-pink-70)
+    }
     .portfolio {
         background-color: var(--color-pink-40);
         border-width: 3px 3px 6px 3px;
@@ -287,6 +312,9 @@ ul, li {
             cursor: pointer;
             background-color: var(--color-pink-70);
         }
+    }
+    .contact-active {
+        background-color: var(--color-yellow-70);
     }
     .contact {
         background-color: var(--color-yellow-40);
