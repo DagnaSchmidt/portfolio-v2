@@ -300,6 +300,48 @@ ul, li {
             cursor: pointer;
             background-color: var(--color-blue-70);
         }
+        &__container {
+            padding: 36px;
+            margin: 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        &__card {
+            background-color: var(--color-scroll);
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            border-radius: 20px;
+            border: var(--border-black-thin);
+            padding: 12px;
+            &__profession {
+                @include title;
+            }
+            &__items {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 75%;
+            }
+            &__item {
+                display: flex;
+                flex-direction: column;
+                &__top {
+                    @include body-L-medium;
+                }
+                &__bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    @include body-light;
+                }
+            }
+        }
     }
     .portfolio-active {
         background-color: var(--color-pink-70)
