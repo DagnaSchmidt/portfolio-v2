@@ -149,6 +149,8 @@
     --color-pale-70: #FA9F93;
     --color-pale-40: #F6BFB0;
 
+    --color-scroll: #F0EAD833;
+
     --font-main: "lato", sans-serif;
     --font-secondary: "xillian", sans-serif;
 
@@ -191,4 +193,18 @@
     --color-pale-100: #A4A4A4;
     --color-pale-70: #B9B9B9;
     --color-pale-40: #CECECE;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--color-scroll);
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    border: var(--border-black-half);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-scroll);
+    border: var(--border-black-half);
+    border-radius: 8px;
 }
