@@ -272,7 +272,6 @@ ul, li {
             border-radius: 20px;
             border: var(--border-black-thin);
             padding: 12px;
-            max-height: 188px;
             &__profession {
                 @include body-medium;
                 padding-bottom: 26px;
@@ -375,6 +374,16 @@ ul, li {
                     padding: 30px;
                 }
             }
+            .education {
+                &__card {
+                    &__profession {
+                        @include body-S-medium;
+                    }
+                    &__school {
+                        @include body-L-bold;
+                    }
+                }
+            }
         }
     }
 }
@@ -401,6 +410,14 @@ ul, li {
                 }
             }
             .skills {
+                &__container {
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    max-height: 48%;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            .education {
                 &__container {
                     overflow-y: scroll;
                     overflow-x: hidden;
@@ -496,11 +513,8 @@ ul, li {
                 top: 48px;
                 right: 28px;
             }
-            .skills {
+            .skills, .education {
                 &__container {
-                    overflow-y: scroll;
-                    overflow-x: hidden;
-                    max-height: 48%;
                     grid-template-columns: repeat(1, 1fr);
                 }
             }

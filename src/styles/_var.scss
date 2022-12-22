@@ -58,6 +58,13 @@
     color: var(--color-text);
     line-height: 22px;
 }
+@mixin body-L-bold {
+    font-family: var(--font-main);
+    font-size: var(--size-18);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+    line-height: 22px;
+}
 %body {
     font-family: var(--font-main);
     font-size: var(--size-16);
@@ -91,6 +98,13 @@
     font-family: var(--font-main);
     font-size: var(--size-14);
     font-weight: var(--weight-regular);
+    color: var(--color-text);
+    line-height: 16px;
+}
+@mixin body-S-medium {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-medium);
     color: var(--color-text);
     line-height: 16px;
 }

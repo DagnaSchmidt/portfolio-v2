@@ -2,7 +2,7 @@ const data = [
     {
         id: 1,
         profession: "Front-end Developer",
-        school: "Sundsgårdens folkhögskola",
+        school: "Sundsgårdens Folkhögskola",
         place: "Helsingborg, Sweden",
         year: "2022-2023"
     },

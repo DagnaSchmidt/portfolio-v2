@@ -407,7 +407,6 @@ ul, li {
   border-radius: 20px;
   border: var(--border-black-thin);
   padding: 12px;
-  max-height: 188px;
 }
 .app .education__card__profession {
   font-weight: var(--weight-medium);
@@ -518,6 +517,20 @@ ul, li {
   .app .header .about__img {
     padding: 30px;
   }
+  .app .header .education__card__profession {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    line-height: 16px;
+  }
+  .app .header .education__card__school {
+    font-family: var(--font-main);
+    font-size: var(--size-18);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+    line-height: 22px;
+  }
 }
 @media screen and (max-width: 768px) {
   .app .header {
@@ -545,6 +558,12 @@ ul, li {
     padding: 10px;
   }
   .app .header .skills__container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 48%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .app .header .education__container {
     overflow-y: scroll;
     overflow-x: hidden;
     max-height: 48%;
@@ -632,10 +651,7 @@ ul, li {
     top: 48px;
     right: 28px;
   }
-  .app .header .skills__container {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    max-height: 48%;
+  .app .header .skills__container, .app .header .education__container {
     grid-template-columns: repeat(1, 1fr);
   }
 }/*# sourceMappingURL=index.css.map */
