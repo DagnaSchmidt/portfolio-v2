@@ -212,7 +212,8 @@ ul, li {
             background-color: var(--color-azure-70);
         }
         &__container {
-            padding: 86px;
+            padding: 24px;
+            margin: 62px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 46px;
@@ -235,7 +236,6 @@ ul, li {
                 width: 100%;
                 position: relative;
                 &__bar-percent {
-                    //width: 80%; //check later
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -372,6 +372,14 @@ ul, li {
                     padding: 10px;
                 }
             }
+            .skills {
+                &__container {
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    max-height: 48%;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
         }
     }
     .visible {
@@ -459,6 +467,14 @@ ul, li {
             .btn-exit {
                 top: 48px;
                 right: 28px;
+            }
+            .skills {
+                &__container {
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    max-height: 48%;
+                    grid-template-columns: repeat(1, 1fr);
+                }
             }
         }
     } 

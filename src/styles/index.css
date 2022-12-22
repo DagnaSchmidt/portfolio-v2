@@ -330,7 +330,8 @@ ul, li {
   background-color: var(--color-azure-70);
 }
 .app .skills__container {
-  padding: 86px;
+  padding: 24px;
+  margin: 62px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 46px;
@@ -493,6 +494,12 @@ ul, li {
   .app .header .about__img {
     padding: 10px;
   }
+  .app .header .skills__container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 48%;
+    grid-template-columns: repeat(2, 1fr);
+  }
   .visible {
     width: 100% !important;
     border-radius: 80px !important;
@@ -574,5 +581,11 @@ ul, li {
   .app .header .btn-exit {
     top: 48px;
     right: 28px;
+  }
+  .app .header .skills__container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 48%;
+    grid-template-columns: repeat(1, 1fr);
   }
 }/*# sourceMappingURL=index.css.map */
