@@ -1,4 +1,4 @@
-export default [
+const data = [
     {
         id: 1,
         name: "HTML",
@@ -45,3 +45,5 @@ export default [
         percent: 50,
     }
 ]
+
+export default data;

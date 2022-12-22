@@ -33,7 +33,7 @@ export default function About() {
                         of Polish Championships, former member 
                         of Polish Powerlifting National Team.</p>
                     </div>
-                    <img className="about__img" src={require(`../images/portret.png`)} />
+                    <img className="about__img" src={require(`../images/portret.png`)} alt="my profile photo" />
                 </div>
                 <div className={`about__long ${about && "visible"}`}>
                     <p>My name is Dagna Schmidt, I am 32 years old and have been living in Göteborg, Sweden for just over a year.</p>
