@@ -9,8 +9,8 @@ export default function CardPortfolio(props) {
     return (
         <div className="portfolio__card">
             <div className="portfolio__card__top">
-                <a className="portfolio__card__top__link" href={props.link} target="_blank">
-                    <img className="portfolio__card__top__img" src={require(`../images/${props.img}`)} />
+                <a className="portfolio__card__top__link" href={props.link} target="_blank" rel="noreferrer">
+                    <img className="portfolio__card__top__img" src={require(`../images/${props.img}`)} alt="site screenshot" />
                     <p className="portfolio__card__top__demo">check demo</p>
                 </a>
             </div>
