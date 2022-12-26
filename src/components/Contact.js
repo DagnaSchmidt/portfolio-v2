@@ -16,6 +16,9 @@ export default function Contact() {
                 <button className="contact__exit btn-round btn-exit" onClick={close}>
                     <i className="fa-solid fa-xmark"></i>
                 </button>
+                <div className="contact__container">
+                    
+                </div>
             </div>
         </section>
     )
