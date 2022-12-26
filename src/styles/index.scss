@@ -426,6 +426,19 @@ ul, li {
                     }
                 }
             }
+            .work {
+                &__container {
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    max-height: 50%;
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                &__card {
+                    &__items {
+                        width: 90%;
+                    }
+                }
+            }
         }
     }
 }
@@ -558,6 +571,30 @@ ul, li {
             .skills, .education {
                 &__container {
                     grid-template-columns: repeat(1, 1fr);
+                }
+            }
+            .work {
+                &__container {
+                    padding: 42px;
+                }
+                &__card {
+                    &__items {
+                        gap: 32px;
+                    }
+                    &__profession {
+                        @include body-L-bold;
+                    }
+                    &__item {
+                        gap: 12px;
+                        &__top {
+                            @include body-medium;
+                        }
+                        &__bottom {
+                            flex-direction: column;
+                            gap: 6px;
+                            @include body-S-light;
+                        }  
+                    }  
                 }
             }
         }
