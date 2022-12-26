@@ -47,12 +47,6 @@ ul, li {
     top: 60px;
 }
  //OVERWRITE///////////////////////
-.visible {
-    padding: 86px;
-    outline: var(--border-black);
-    width: 60% !important;
-    transform: scale(1) !important;
-}
 .move {
     right: 58% !important;
 }
@@ -164,7 +158,7 @@ ul, li {
             position: absolute;
             right: 0px;
             top: 0px;
-            width: 0%;
+            width: 0;
             border-radius: 0 80px 80px 0;
             background-color: var(--color-yellow-70);
             overflow: hidden;
@@ -176,12 +170,18 @@ ul, li {
             p {
                 overflow: hidden;
             }
-            transition: width 1s, outline 1s, padding 1s, height 1s, transform 1s;
+            transition: all 1s;
         }
     }
     .about-active {
         @extend %active;
         background-color: var(--color-pale-70);
+        .visible {
+            padding: 86px;
+            outline: var(--border-black);
+            width: 60% !important;
+            transform: scale(1) !important;
+        }
     }
     .skills {
         background-color: var(--color-azure-40);
@@ -371,43 +371,49 @@ ul, li {
             border-radius: 20px;
             border: var(--border-black-thin);
             .left {
-                left: -30px;
+                right: 90%;
+                //left: -30px;
             }
             .move {
                 width: 100%;
-                height: 100%;
+                right: 0 !important;
                 transform: scale(1);
                 position: absolute;
-                left: 0; ////////////check transition!!!!!!!!!
             }
             &__btn {
                 position: absolute;
                 right: -30px;
                 bottom: -30px;
-                background-color: var(--color-yellow-70);
+                background-color: var(--color-yellow-100);
                 transform: scale(.6);
-                transition: left 1s;
+                transition: right 1s;
                 &:hover {
-                    background-color: var(--color-yellow-40);
+                    background-color: var(--color-yellow-70);
                 }
             }
             &__text {
                 width: 0;
-                height: 0;
+                height: 100%;
                 transform: scale(0);
                 position: absolute;
-                bottom: 0;
+                left: auto;
+                right: 0;
+                top: 0;
                 background-color: var(--color-yellow-70);
                 border: var(--border-black);
-                border-radius: 10px;
+                border-radius: 20px;
                 padding: 18px;
                 transition: all 1s;
                 display: flex;
                 flex-direction: column;
-                gap: 24px;
+                justify-content: space-between;
+                overflow: hidden;
                 @include body-medium;
                 .bold {
                     @include body-bold;
+                }
+                &__read {
+                    @include body-light;
                 }
             }
             &__top {

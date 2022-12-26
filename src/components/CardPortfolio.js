@@ -17,7 +17,7 @@ export default function CardPortfolio(props) {
             <div className="portfolio__card__bottom">
                 <h3 className="portfolio__card__bottom__title">{props.title}</h3>
                 <p className="portfolio__card__bottom__read">
-                    read {text ? "less" : "more"}
+                    read more
                 </p>
             </div>
             <button className={`portfolio__card__btn btn-round ${text && "left"}`} onClick={toggle}>
@@ -26,6 +26,7 @@ export default function CardPortfolio(props) {
             <div className={`portfolio__card__text ${text && "move"}`}>
                 <p className="portfolio__card__text__description">{props.description}</p>
                 <p className="portfolio__card__text__programs">Built on: <span className="bold">{props.programs}</span>.</p>
+                <p className="portfolio__card__text__read">read less</p>
             </div>
         </div>
     )

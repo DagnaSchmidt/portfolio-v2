@@ -22,7 +22,7 @@
   src: url(../fonts/Lato-Bold.ttf) format(truetype);
   font-weight: 500;
 }
-.app .portfolio__card__bottom__read, .app .portfolio__card__text .bold, .app .portfolio__card__text, .app .work__card__item__bottom, .app .education__card__year, .app .education__card__place, .app .education__card__profession, .app .skills__card__top, .app .about__long, .app .about__short {
+.app .portfolio__card__bottom__read, .app .portfolio__card__text__read, .app .portfolio__card__text .bold, .app .portfolio__card__text, .app .work__card__item__bottom, .app .education__card__year, .app .education__card__place, .app .education__card__profession, .app .skills__card__top, .app .about__long, .app .about__short {
   font-family: var(--font-main);
   font-size: var(--size-16);
   color: var(--color-text);
@@ -179,13 +179,6 @@ ul, li {
   top: 60px;
 }
 
-.visible {
-  padding: 86px;
-  outline: var(--border-black);
-  width: 60% !important;
-  transform: scale(1) !important;
-}
-
 .move {
   right: 58% !important;
 }
@@ -303,7 +296,7 @@ ul, li {
   position: absolute;
   right: 0px;
   top: 0px;
-  width: 0%;
+  width: 0;
   border-radius: 0 80px 80px 0;
   background-color: var(--color-yellow-70);
   overflow: hidden;
@@ -312,13 +305,19 @@ ul, li {
   flex-direction: column;
   justify-content: space-between;
   transform: scale(0.7);
-  transition: width 1s, outline 1s, padding 1s, height 1s, transform 1s;
+  transition: all 1s;
 }
 .app .about__long p {
   overflow: hidden;
 }
 .app .about-active {
   background-color: var(--color-pale-70);
+}
+.app .about-active .visible {
+  padding: 86px;
+  outline: var(--border-black);
+  width: 60% !important;
+  transform: scale(1) !important;
 }
 .app .skills {
   background-color: var(--color-azure-40);
@@ -519,44 +518,49 @@ ul, li {
   border: var(--border-black-thin);
 }
 .app .portfolio__card .left {
-  left: -30px;
+  right: 90%;
 }
 .app .portfolio__card .move {
   width: 100%;
-  height: 100%;
+  right: 0 !important;
   transform: scale(1);
   position: absolute;
-  left: 0;
 }
 .app .portfolio__card__btn {
   position: absolute;
   right: -30px;
   bottom: -30px;
-  background-color: var(--color-yellow-70);
+  background-color: var(--color-yellow-100);
   transform: scale(0.6);
-  transition: left 1s;
+  transition: right 1s;
 }
 .app .portfolio__card__btn:hover {
-  background-color: var(--color-yellow-40);
+  background-color: var(--color-yellow-70);
 }
 .app .portfolio__card__text {
   width: 0;
-  height: 0;
+  height: 100%;
   transform: scale(0);
   position: absolute;
-  bottom: 0;
+  left: auto;
+  right: 0;
+  top: 0;
   background-color: var(--color-yellow-70);
   border: var(--border-black);
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 18px;
   transition: all 1s;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  justify-content: space-between;
+  overflow: hidden;
   font-weight: var(--weight-medium);
 }
 .app .portfolio__card__text .bold {
   font-weight: var(--weight-bold);
+}
+.app .portfolio__card__text__read {
+  font-weight: var(--weight-light);
 }
 .app .portfolio__card__top {
   padding: 18px;
