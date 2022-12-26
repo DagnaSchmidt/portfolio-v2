@@ -22,7 +22,7 @@
   src: url(../fonts/Lato-Bold.ttf) format(truetype);
   font-weight: 500;
 }
-.app .work__card__item__bottom, .app .education__card__year, .app .education__card__place, .app .education__card__profession, .app .skills__card__top, .app .about__long, .app .about__short {
+.app .portfolio__card__bottom__read, .app .portfolio__card__text .bold, .app .portfolio__card__text, .app .work__card__item__bottom, .app .education__card__year, .app .education__card__place, .app .education__card__profession, .app .skills__card__top, .app .about__long, .app .about__short {
   font-family: var(--font-main);
   font-size: var(--size-16);
   color: var(--color-text);
@@ -500,6 +500,118 @@ ul, li {
   cursor: pointer;
   background-color: var(--color-pink-70);
 }
+.app .portfolio__container {
+  padding: 36px;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.app .portfolio__card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-scroll);
+  border-radius: 20px;
+  border: var(--border-black-thin);
+}
+.app .portfolio__card .left {
+  left: -30px;
+}
+.app .portfolio__card .move {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  position: absolute;
+  left: 0;
+}
+.app .portfolio__card__btn {
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  background-color: var(--color-yellow-70);
+  transform: scale(0.6);
+  transition: left 1s;
+}
+.app .portfolio__card__btn:hover {
+  background-color: var(--color-yellow-40);
+}
+.app .portfolio__card__text {
+  width: 0;
+  height: 0;
+  transform: scale(0);
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-yellow-70);
+  border: var(--border-black);
+  border-radius: 10px;
+  padding: 18px;
+  transition: all 1s;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-weight: var(--weight-medium);
+}
+.app .portfolio__card__text .bold {
+  font-weight: var(--weight-bold);
+}
+.app .portfolio__card__top {
+  padding: 18px;
+}
+.app .portfolio__card__top__link {
+  position: relative;
+  width: 100%;
+}
+.app .portfolio__card__top__link:hover .portfolio__card__top__demo {
+  visibility: visible;
+}
+.app .portfolio__card__top__demo {
+  font-family: var(--font-main);
+  font-size: var(--size-14);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  line-height: 16px;
+  position: absolute;
+  top: -36px;
+  left: 12px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: var(--color-yellow-70);
+  visibility: hidden;
+}
+.app .portfolio__card__top__img {
+  width: 100%;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  filter: grayscale(0.7);
+}
+.app .portfolio__card__top__img:hover {
+  cursor: pointer;
+  filter: grayscale(0);
+}
+.app .portfolio__card__bottom {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.app .portfolio__card__bottom__title {
+  font-family: var(--font-main);
+  font-size: var(--size-20);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  line-height: 24px;
+}
+.app .portfolio__card__bottom__read {
+  align-self: flex-end;
+  padding: 0 12px;
+  font-weight: var(--weight-light);
+}
 .app .contact-active {
   background-color: var(--color-yellow-70);
 }
@@ -713,15 +825,11 @@ ul, li {
   .app .header .skills__container, .app .header .education__container {
     grid-template-columns: repeat(1, 1fr);
   }
+  .app .header .work__container {
+    padding: 42px;
+  }
   .app .header .work__card__items {
     gap: 32px;
-  }
-  .app .header .work__card__item {
-    gap: 12px;
-  }
-  .app .header .work__card__item__bottom {
-    flex-direction: column;
-    gap: 6px;
   }
   .app .header .work__card__profession {
     font-family: var(--font-main);
@@ -729,5 +837,12 @@ ul, li {
     font-weight: var(--weight-bold);
     color: var(--color-text);
     line-height: 22px;
+  }
+  .app .header .work__card__item {
+    gap: 12px;
+  }
+  .app .header .work__card__item__bottom {
+    flex-direction: column;
+    gap: 6px;
   }
 }/*# sourceMappingURL=index.css.map */
