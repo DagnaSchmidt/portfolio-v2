@@ -328,14 +328,8 @@ ul, li {
   background-color: var(--color-azure-70);
 }
 .app .skills__container {
-  padding: 36px;
-  margin: 50px;
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 46px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 .app .skills__card {
   display: flex;
@@ -389,14 +383,8 @@ ul, li {
   background-color: var(--color-neon-pink-70);
 }
 .app .education__container {
-  padding: 36px;
-  margin: 50px;
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 .app .education__card {
   background-color: var(--color-scroll);
@@ -439,14 +427,8 @@ ul, li {
   background-color: var(--color-blue-70);
 }
 .app .work__container {
-  padding: 36px;
-  margin: 50px;
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 .app .work__card {
   background-color: var(--color-scroll);
@@ -500,14 +482,8 @@ ul, li {
   background-color: var(--color-pink-70);
 }
 .app .portfolio__container {
-  padding: 36px;
-  margin: 50px;
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 .app .portfolio__card {
   display: flex;
@@ -658,6 +634,14 @@ ul, li {
   display: flex;
   visibility: visible;
 }
+.app .skills__container, .app .education__container, .app .work__container, .app .portfolio__container, .app .contact__container {
+  padding: 36px;
+  margin: 50px;
+  display: grid;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
 
 @media screen and (max-width: 1023px) {
   .app .header {
@@ -721,6 +705,10 @@ ul, li {
     color: var(--color-text);
     line-height: 40px;
   }
+  .app .header .visible {
+    width: 100% !important;
+    border-radius: 80px !important;
+  }
   .app .header .about__short {
     font-family: var(--font-main);
     font-size: var(--size-12);
@@ -732,21 +720,11 @@ ul, li {
   .app .header .about__img {
     padding: 10px;
   }
-  .app .header .skills__container {
+  .app .header .skills__container, .app .header .education__container {
     overflow-y: scroll;
     overflow-x: hidden;
     max-height: 48%;
     grid-template-columns: repeat(2, 1fr);
-  }
-  .app .header .education__container {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    max-height: 48%;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .visible {
-    width: 100% !important;
-    border-radius: 80px !important;
   }
   .move {
     right: 96% !important;
@@ -795,7 +773,6 @@ ul, li {
   }
   .app .header .about__container {
     flex-direction: column;
-    padding: 42px;
     justify-content: flex-end;
     gap: 24px;
   }
@@ -822,15 +799,16 @@ ul, li {
     right: 0;
     top: 100px;
   }
+  .app .header .about__container, .app .header .skills__container, .app .header .education__container, .app .header .work__container, .app .header .portfolio__container, .app .header .contact__container {
+    margin: 20px 20px 40px 20px;
+    padding: 22px;
+  }
   .app .header .btn-exit {
     top: 48px;
     right: 28px;
   }
   .app .header .skills__container, .app .header .education__container {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .app .header .work__container {
-    padding: 42px;
   }
   .app .header .work__card__items {
     gap: 32px;

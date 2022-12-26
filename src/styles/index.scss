@@ -191,14 +191,8 @@ ul, li {
             background-color: var(--color-azure-70);
         }
         &__container {
-            padding: 36px;
-            margin: 50px;
-            display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 46px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
         &__card {
             display: flex;
@@ -255,14 +249,8 @@ ul, li {
             background-color: var(--color-neon-pink-70);
         }
         &__container {
-            padding: 36px;
-            margin: 50px;
-            display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
         &__card {
             background-color: var(--color-scroll);
@@ -301,14 +289,8 @@ ul, li {
             background-color: var(--color-blue-70);
         }
         &__container {
-            padding: 36px;
-            margin: 50px;
-            display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 48px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
         &__card {
             background-color: var(--color-scroll);
@@ -354,14 +336,8 @@ ul, li {
             background-color: var(--color-pink-70);
         }
         &__container {
-            padding: 36px;
-            margin: 50px;
-            display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 48px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
         &__card {
             display: flex;
@@ -372,7 +348,6 @@ ul, li {
             border: var(--border-black-thin);
             .left {
                 right: 90%;
-                //left: -30px;
             }
             .move {
                 width: 100%;
@@ -482,6 +457,7 @@ ul, li {
         &__title {
             @include title-main;
         }
+        
         &-active {
             &__title {
                 @include title-main;
@@ -500,6 +476,16 @@ ul, li {
                 display: flex;
                 visibility: visible;
             }
+        }
+    }
+    .skills, .education, .work, .portfolio, .contact {
+        &__container {
+            padding: 36px;
+            margin: 50px;
+            display: grid;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     }
 }
@@ -566,6 +552,10 @@ ul, li {
                     @include logo-mobile;
                 }
             }
+            .visible {
+                width: 100% !important;
+                border-radius: 80px !important;
+            }
             .about {
                 &__short {
                     @include body-mobile-regular;
@@ -575,15 +565,7 @@ ul, li {
                     padding: 10px;
                 }
             }
-            .skills {
-                &__container {
-                    overflow-y: scroll;
-                    overflow-x: hidden;
-                    max-height: 48%;
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-            .education {
+            .skills, .education {
                 &__container {
                     overflow-y: scroll;
                     overflow-x: hidden;
@@ -592,10 +574,6 @@ ul, li {
                 }
             }
         }
-    }
-    .visible {
-        width: 100% !important;
-        border-radius: 80px !important;
     }
     .move {
         right: 96% !important;
@@ -642,7 +620,6 @@ ul, li {
                 }
                 &__container {
                     flex-direction: column;
-                    padding: 42px;
                     justify-content: flex-end;
                     gap: 24px;
                 }
@@ -674,6 +651,10 @@ ul, li {
                         top: 100px;
                     }
                 }
+                &__container {
+                    margin: 20px 20px 40px 20px;
+                    padding: 22px;
+                }
             }
             .btn-exit {
                 top: 48px;
@@ -685,9 +666,6 @@ ul, li {
                 }
             }
             .work {
-                &__container {
-                    padding: 42px;
-                }
                 &__card {
                     &__items {
                         gap: 32px;
