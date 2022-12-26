@@ -17,7 +17,14 @@ export default function Contact() {
                     <i className="fa-solid fa-xmark"></i>
                 </button>
                 <div className="contact__container">
-                    
+                    <div className="contact__card">
+                        <form className="contact__card__form">
+                            <label className="contact__card__label"></label>
+                            <input className="contact__card__input" />
+                            <label className="contact__card__label"></label>
+                            <input className="contact__card__input" />
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
