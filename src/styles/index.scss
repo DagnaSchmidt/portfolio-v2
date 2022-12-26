@@ -425,6 +425,53 @@ ul, li {
                 cursor: pointer;
                 background-color: var(--color-yellow-70);
             }
+            &__card {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 48px;
+                &__form {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    padding: 24px 12px 12px 12px;
+                    background-color: var(--color-scroll);
+                    border-radius: 20px;
+                    border: var(--border-black-thin);
+                }
+                &__send {
+                    align-self: flex-end;
+                    padding-right: 24px;
+                    padding-top: 32px;
+                    @include body-light;
+                }
+                &__label {
+                    @include body-L-medium;
+                }
+                &__input {
+                    height: 36px;
+                    padding: 0 12px;
+                    border-bottom: var(--border-black-half);
+                    &:hover {
+                        cursor: text;
+                        background-color: var(--color-yellow-70);
+                    }
+                    &:active, &:focus {
+                        background-color: var(--color-yellow-100);
+                    }
+                }
+                &__btn {
+                    position: absolute;
+                    right: -30px;
+                    bottom: -30px;
+                    background-color: var(--color-yellow-100);
+                    transform: scale(.6);
+                    transition: right 1s;
+                    &:hover {
+                        background-color: var(--color-yellow-70);
+                    }
+                }
+            }
         }
         .about, .skills, .education, .work, .portfolio, .contact {
             border-color: var(--color-black);

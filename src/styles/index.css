@@ -22,7 +22,7 @@
   src: url(../fonts/Lato-Bold.ttf) format(truetype);
   font-weight: 500;
 }
-.app .header .portfolio__card__bottom__read, .app .header .portfolio__card__text__read, .app .header .portfolio__card__text .bold, .app .header .portfolio__card__text, .app .header .work__card__item__bottom, .app .header .education__card__year, .app .header .education__card__place, .app .header .education__card__profession, .app .header .skills__card__top, .app .header .about__long, .app .header .about__short {
+.app .header .contact__card__send, .app .header .portfolio__card__bottom__read, .app .header .portfolio__card__text__read, .app .header .portfolio__card__text .bold, .app .header .portfolio__card__text, .app .header .work__card__item__bottom, .app .header .education__card__year, .app .header .education__card__place, .app .header .education__card__profession, .app .header .skills__card__top, .app .header .about__long, .app .header .about__short {
   font-family: var(--font-main);
   font-size: var(--size-16);
   color: var(--color-text);
@@ -566,6 +566,57 @@ ul, li {
 }
 .app .header .contact:hover {
   cursor: pointer;
+  background-color: var(--color-yellow-70);
+}
+.app .header .contact__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+.app .header .contact__card__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 12px 12px 12px;
+  background-color: var(--color-scroll);
+  border-radius: 20px;
+  border: var(--border-black-thin);
+}
+.app .header .contact__card__send {
+  align-self: flex-end;
+  padding-right: 24px;
+  padding-top: 32px;
+  font-weight: var(--weight-light);
+}
+.app .header .contact__card__label {
+  font-family: var(--font-main);
+  font-size: var(--size-18);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  line-height: 22px;
+}
+.app .header .contact__card__input {
+  height: 36px;
+  padding: 0 12px;
+  border-bottom: var(--border-black-half);
+}
+.app .header .contact__card__input:hover {
+  cursor: text;
+  background-color: var(--color-yellow-70);
+}
+.app .header .contact__card__input:active, .app .header .contact__card__input:focus {
+  background-color: var(--color-yellow-100);
+}
+.app .header .contact__card__btn {
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  background-color: var(--color-yellow-100);
+  transform: scale(0.6);
+  transition: right 1s;
+}
+.app .header .contact__card__btn:hover {
   background-color: var(--color-yellow-70);
 }
 .app .header .about, .app .header .skills, .app .header .education, .app .header .work, .app .header .portfolio, .app .header .contact {
