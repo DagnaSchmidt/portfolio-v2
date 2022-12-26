@@ -536,6 +536,14 @@ ul, li {
                     }
                 }
             }
+            .portfolio {
+                &__container {
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    max-height: 55%;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
         }
     }
 }
@@ -571,6 +579,11 @@ ul, li {
                     overflow-x: hidden;
                     max-height: 48%;
                     grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            .portfolio {
+                &__container {
+                    grid-template-columns: repeat(1, 1fr);
                 }
             }
         }
@@ -680,6 +693,19 @@ ul, li {
                             gap: 6px;
                         }  
                     }  
+                }
+            }
+            .portfolio {
+                &__card {
+                    &__text {
+                        @include body-S-medium;
+                        .bold {
+                            @include body-S-bold;
+                        }
+                        &__read {
+                            @include body-S-light;
+                        }
+                    }
                 }
             }
         }

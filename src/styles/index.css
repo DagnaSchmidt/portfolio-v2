@@ -690,6 +690,12 @@ ul, li {
   .app .header .work__card__items {
     width: 90%;
   }
+  .app .header .portfolio__container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 55%;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (max-width: 768px) {
   .app .header {
@@ -725,6 +731,9 @@ ul, li {
     overflow-x: hidden;
     max-height: 48%;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .app .header .portfolio__container {
+    grid-template-columns: repeat(1, 1fr);
   }
   .move {
     right: 96% !important;
@@ -826,5 +835,26 @@ ul, li {
   .app .header .work__card__item__bottom {
     flex-direction: column;
     gap: 6px;
+  }
+  .app .header .portfolio__card__text {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    line-height: 16px;
+  }
+  .app .header .portfolio__card__text .bold {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+    line-height: 16px;
+  }
+  .app .header .portfolio__card__text__read {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-light);
+    color: var(--color-text);
+    line-height: 16px;
   }
 }/*# sourceMappingURL=index.css.map */
