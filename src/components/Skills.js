@@ -20,9 +20,9 @@ export default function Skills() {
         )
     })
     return (
-        <section className={show ? "skills-active" : "skills"} onClick={open}>
-            <h2 className={show ? "skills-active__title" : "skills__title"}>Skills</h2>
-            <div className={`skills-active__content ${show && "display"}`}>
+        <section className={`skills ${show && "active"}`} onClick={open}>
+            <h2 className={`skills__title ${show && "active-title"}`}>Skills</h2>
+            <div className={`skills__content ${show && "display"}`}>
                 <button className="skills__exit btn-round btn-exit" onClick={close}>
                     <i className="fa-solid fa-xmark"></i>
                 </button>

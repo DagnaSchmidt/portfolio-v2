@@ -20,9 +20,9 @@ export default function Work() {
         )
     })
     return (
-        <section className={show ? "work-active" : "work"} onClick={open}>
-            <h2 className={show ? "work-active__title" : "work__title"}>Work</h2>
-            <div className={`work-active__content ${show && "display"}`}>
+        <section className={`work ${show && "active"}`} onClick={open}>
+            <h2 className={`work__title ${show && "active-title"}`}>Work</h2>
+            <div className={`work__content ${show && "display"}`}>
                 <button className="work__exit btn-round btn-exit" onClick={close}>
                     <i className="fa-solid fa-xmark"></i>
                 </button>

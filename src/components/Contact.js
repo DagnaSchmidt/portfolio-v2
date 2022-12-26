@@ -10,9 +10,9 @@ export default function Contact() {
         if(show === true) {setShow(!show)}
     }
     return (
-        <section className={show ? "contact-active" : "contact"} onClick={open}>
-            <h2 className={show ? "contact-active__title" : "contact__title"}>Contact</h2>
-            <div className={`contact-active__content ${show && "display"}`}>
+        <section className={`contact ${show && "active"}`} onClick={open}>
+            <h2 className={`contact__title ${show && "active-title"}`}>Contact</h2>
+            <div className={`contact__content ${show && "display"}`}>
                 <button className="contact__exit btn-round btn-exit" onClick={close}>
                     <i className="fa-solid fa-xmark"></i>
                 </button>

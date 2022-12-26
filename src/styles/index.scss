@@ -111,356 +111,330 @@ ul, li {
             gap: 0;
             position: relative;
         }
-    }
-    .about {
-        background-color: var(--color-pale-40);
-        border-width: 6px 3px 3px 6px;
-        border-radius: 80px 0 0 0;
-        &:hover {
-            cursor: pointer;
-            background-color: var(--color-pale-70);
-        }
-        &__more {
-            background-color: var(--color-yellow-100);
-            position: absolute;
-            margin-top: auto;
-            margin-bottom: auto;
-            top: 0;
-            bottom: 0;
-            right: -40px;
-            z-index: 3;
+        .about {
+            background-color: var(--color-pale-40);
+            border-width: 6px 3px 3px 6px;
+            border-radius: 80px 0 0 0;
             &:hover {
-                background-color: var(--color-yellow-70);
+                cursor: pointer;
+                background-color: var(--color-pale-70);
             }
-            transition: right 1s;
-        }
-        &__container {
-            padding: 86px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-        &__img {
-            width: 50%;
-            padding: 50px;
-            align-self: center;
-            justify-self: center;
-        }
-        &__short {
-            width: 28%;
-            @include body-regular;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        &__long {
-            @include body-regular;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            width: 0;
-            border-radius: 0 80px 80px 0;
-            background-color: var(--color-yellow-70);
-            overflow: hidden;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transform: scale(.7);
-            p {
-                overflow: hidden;
-            }
-            transition: all 1s;
-        }
-    }
-    .about-active {
-        @extend %active;
-        background-color: var(--color-pale-70);
-        .visible {
-            padding: 86px;
-            outline: var(--border-black);
-            width: 60% !important;
-            transform: scale(1) !important;
-        }
-    }
-    .skills {
-        background-color: var(--color-azure-40);
-        border-width: 6px 3px 3px 3px;
-        &:hover {
-            cursor: pointer;
-            background-color: var(--color-azure-70);
-        }
-        &__container {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 46px;
-        }
-        &__card {
-            display: flex;
-            flex-direction: column;
-            height: 46px;
-            width: 100%;
-            justify-content: space-between;
-            &__top {
-                display: flex;
-                justify-content: space-between;
-                @include body-regular;
-            }
-            &__bottom {
-                width: 100%;
-                position: relative;
-                &__bar-percent {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 14px;
-                    background-color: var(--color-yellow-100);
-                    border: var(--border-black-mobile);
-                    border-radius: 8px;
-                }
-                &__bar-bg {
-                    background-color: var(--color-body);
-                    border: var(--border-black-half);
-                    border-radius: 8px;
-                    width: 100%;
-                    height: 14px;
-                }
-            }
-        }
-    }
-    .skills-active {
-        background-color: var(--color-azure-70); 
-    }
-    .skills-active, .education-active, .work-active, .portfolio-active, .contact-active {
-        @extend %active;
-        &__content {
-            display: flex;
-            align-items: flex-end;
-        }
-    }
-    .education-active {
-        background-color: var(--color-neon-pink-70) !important;
-    }
-    .education {
-        background-color: var(--color-neon-pink-40);
-        border-width: 6px 6px 3px 3px;
-        border-radius: 0 80px 0 0;
-        &:hover {
-            cursor: pointer;
-            background-color: var(--color-neon-pink-70);
-        }
-        &__container {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-        &__card {
-            background-color: var(--color-scroll);
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            border-radius: 20px;
-            border: var(--border-black-thin);
-            padding: 12px;
-            &__profession {
-                @include body-medium;
-                padding-bottom: 26px;
-            }
-            &__school {
-                @include title;
-            }
-            &__place {
-                @include body-light;
-            }
-            &__year {
-                padding-top: 26px;
-                text-align: right;
-                @include body-light;
-            }
-        }
-    }
-    .work-active {
-        background-color: var(--color-blue-70);
-    }
-    .work {
-        background-color: var(--color-blue-40);
-        border-width: 3px 3px 6px 6px;
-        border-radius: 0 0 0 80px;
-        &:hover {
-            cursor: pointer;
-            background-color: var(--color-blue-70);
-        }
-        &__container {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 48px;
-        }
-        &__card {
-            background-color: var(--color-scroll);
-            display: flex;
-            flex-direction: column;
-            gap: 48px;
-            border-radius: 20px;
-            border: var(--border-black-thin);
-            padding: 12px;
-            &__profession {
-                @include title;
-            }
-            &__items {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                margin-left: auto;
-                margin-right: auto;
-                width: 75%;
-            }
-            &__item {
-                display: flex;
-                flex-direction: column;
-                &__top {
-                    @include body-L-medium;
-                }
-                &__bottom {
-                    display: flex;
-                    justify-content: space-between;
-                    @include body-light;
-                }
-            }
-        }
-    }
-    .portfolio-active {
-        background-color: var(--color-pink-70)
-    }
-    .portfolio {
-        background-color: var(--color-pink-40);
-        border-width: 3px 3px 6px 3px;
-        &:hover {
-            cursor: pointer;
-            background-color: var(--color-pink-70);
-        }
-        &__container {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-        }
-        &__card {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            background-color: var(--color-scroll);
-            border-radius: 20px;
-            border: var(--border-black-thin);
-            .left {
-                right: 90%;
-            }
-            .move {
-                width: 100%;
-                right: 0 !important;
-                transform: scale(1);
-                position: absolute;
-            }
-            &__btn {
-                position: absolute;
-                right: -30px;
-                bottom: -30px;
+            &__more {
                 background-color: var(--color-yellow-100);
-                transform: scale(.6);
-                transition: right 1s;
+                position: absolute;
+                margin-top: auto;
+                margin-bottom: auto;
+                top: 0;
+                bottom: 0;
+                right: -40px;
+                z-index: 3;
                 &:hover {
                     background-color: var(--color-yellow-70);
                 }
+                transition: right 1s;
             }
-            &__text {
-                width: 0;
-                height: 100%;
-                transform: scale(0);
+            &__container {
+                padding: 86px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            &__img {
+                width: 50%;
+                padding: 50px;
+                align-self: center;
+                justify-self: center;
+            }
+            &__short {
+                width: 28%;
+                @include body-regular;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            &__long {
+                @include body-regular;
                 position: absolute;
-                left: auto;
-                right: 0;
-                top: 0;
+                right: 0px;
+                top: 0px;
+                width: 0;
+                border-radius: 0 80px 80px 0;
                 background-color: var(--color-yellow-70);
-                border: var(--border-black);
-                border-radius: 20px;
-                padding: 18px;
-                transition: all 1s;
+                overflow: hidden;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                overflow: hidden;
-                @include body-medium;
-                .bold {
-                    @include body-bold;
+                transform: scale(.7);
+                p {
+                    overflow: hidden;
                 }
-                &__read {
-                    @include body-light;
-                }
+                transition: all 1s;
             }
-            &__top {
-                padding: 18px;
-                &__link {
+            .visible {
+                padding: 86px;
+                outline: var(--border-black);
+                width: 60% !important;
+                transform: scale(1) !important;
+            }
+        }
+        .skills {
+            background-color: var(--color-azure-40);
+            border-width: 6px 3px 3px 3px;
+            &:hover {
+                cursor: pointer;
+                background-color: var(--color-azure-70);
+            }
+            &__container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 46px;
+            }
+            &__card {
+                display: flex;
+                flex-direction: column;
+                height: 46px;
+                width: 100%;
+                justify-content: space-between;
+                &__top {
+                    display: flex;
+                    justify-content: space-between;
+                    @include body-regular;
+                }
+                &__bottom {
+                    width: 100%;
                     position: relative;
-                    width: 100%;
-                    &:hover {
-                        .portfolio__card__top__demo {
-                            visibility: visible;
-                        }
+                    &__bar-percent {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 14px;
+                        background-color: var(--color-yellow-100);
+                        border: var(--border-black-mobile);
+                        border-radius: 8px;
                     }
-                }
-                &__demo {
-                    @include body-S-medium;
-                    position: absolute;
-                    top: -36px;
-                    left: 12px;
-                    padding: 8px;
-                    border-radius: 10px;
-                    background-color: var(--color-yellow-70);
-                    visibility: hidden;
-                }
-                &__img {
-                    width: 100%;
-                    height: 140px;
-                    object-fit: cover;
-                    border-radius: 10px;
-                    filter: grayscale(.7);
-                    &:hover {
-                        cursor: pointer;
-                        filter: grayscale(0);
+                    &__bar-bg {
+                        background-color: var(--color-body);
+                        border: var(--border-black-half);
+                        border-radius: 8px;
+                        width: 100%;
+                        height: 14px;
                     }
                 }
             }
-            &__bottom {
-                padding: 18px;
+        }
+        .education {
+            background-color: var(--color-neon-pink-40);
+            border-width: 6px 6px 3px 3px;
+            border-radius: 0 80px 0 0;
+            &:hover {
+                cursor: pointer;
+                background-color: var(--color-neon-pink-70);
+            }
+            &__container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 32px;
+            }
+            &__card {
+                background-color: var(--color-scroll);
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
-                &__title {
+                border-radius: 20px;
+                border: var(--border-black-thin);
+                padding: 12px;
+                &__profession {
+                    @include body-medium;
+                    padding-bottom: 26px;
+                }
+                &__school {
                     @include title;
                 }
-                &__read {
-                    align-self: flex-end;
-                    padding: 0 12px;
+                &__place {
+                    @include body-light;
+                }
+                &__year {
+                    padding-top: 26px;
+                    text-align: right;
                     @include body-light;
                 }
             }
         }
-    }
-    .contact-active {
-        background-color: var(--color-yellow-70);
-    }
-    .contact {
-        background-color: var(--color-yellow-40);
-        border-width: 3px 6px 6px 3px;
-        border-radius: 0 0 80px 0;
-        &:hover {
-            cursor: pointer;
-            background-color: var(--color-yellow-70);
+        .work {
+            background-color: var(--color-blue-40);
+            border-width: 3px 3px 6px 6px;
+            border-radius: 0 0 0 80px;
+            &:hover {
+                cursor: pointer;
+                background-color: var(--color-blue-70);
+            }
+            &__container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 48px;
+            }
+            &__card {
+                background-color: var(--color-scroll);
+                display: flex;
+                flex-direction: column;
+                gap: 48px;
+                border-radius: 20px;
+                border: var(--border-black-thin);
+                padding: 12px;
+                &__profession {
+                    @include title;
+                }
+                &__items {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 75%;
+                }
+                &__item {
+                    display: flex;
+                    flex-direction: column;
+                    &__top {
+                        @include body-L-medium;
+                    }
+                    &__bottom {
+                        display: flex;
+                        justify-content: space-between;
+                        @include body-light;
+                    }
+                }
+            }
         }
-    }
-    .about, .skills, .education, .work, .portfolio, .contact {
-        @extend %section;
-        &__title {
-            @include title-main;
+        .portfolio {
+            background-color: var(--color-pink-40);
+            border-width: 3px 3px 6px 3px;
+            &:hover {
+                cursor: pointer;
+                background-color: var(--color-pink-70);
+            }
+            &__container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 48px;
+            }
+            &__card {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                background-color: var(--color-scroll);
+                border-radius: 20px;
+                border: var(--border-black-thin);
+                .left {
+                    right: 90%;
+                }
+                .move {
+                    width: 100%;
+                    right: 0 !important;
+                    transform: scale(1);
+                    position: absolute;
+                }
+                &__btn {
+                    position: absolute;
+                    right: -30px;
+                    bottom: -30px;
+                    background-color: var(--color-yellow-100);
+                    transform: scale(.6);
+                    transition: right 1s;
+                    &:hover {
+                        background-color: var(--color-yellow-70);
+                    }
+                }
+                &__text {
+                    width: 0;
+                    height: 100%;
+                    transform: scale(0);
+                    position: absolute;
+                    left: auto;
+                    right: 0;
+                    top: 0;
+                    background-color: var(--color-yellow-70);
+                    border: var(--border-black);
+                    border-radius: 20px;
+                    padding: 18px;
+                    transition: all 1s;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    @include body-medium;
+                    .bold {
+                        @include body-bold;
+                    }
+                    &__read {
+                        @include body-light;
+                    }
+                }
+                &__top {
+                    padding: 18px;
+                    &__link {
+                        position: relative;
+                        width: 100%;
+                        &:hover {
+                            .portfolio__card__top__demo {
+                                visibility: visible;
+                            }
+                        }
+                    }
+                    &__demo {
+                        @include body-S-medium;
+                        position: absolute;
+                        top: -36px;
+                        left: 12px;
+                        padding: 8px;
+                        border-radius: 10px;
+                        background-color: var(--color-yellow-70);
+                        visibility: hidden;
+                    }
+                    &__img {
+                        width: 100%;
+                        height: 140px;
+                        object-fit: cover;
+                        border-radius: 10px;
+                        filter: grayscale(.7);
+                        &:hover {
+                            cursor: pointer;
+                            filter: grayscale(0);
+                        }
+                    }
+                }
+                &__bottom {
+                    padding: 18px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    &__title {
+                        @include title;
+                    }
+                    &__read {
+                        align-self: flex-end;
+                        padding: 0 12px;
+                        @include body-light;
+                    }
+                }
+            }
         }
-        
-        &-active {
+        .contact {
+            background-color: var(--color-yellow-40);
+            border-width: 3px 6px 6px 3px;
+            border-radius: 0 0 80px 0;
+            &:hover {
+                cursor: pointer;
+                background-color: var(--color-yellow-70);
+            }
+        }
+        .about, .skills, .education, .work, .portfolio, .contact {
+            border-color: var(--color-black);
+            border-style: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &__title {
                 @include title-main;
+            }
+            &__title.active-title {
                 position: absolute;
                 left: 86px;
                 top: 120px;
@@ -468,26 +442,60 @@ ul, li {
             &__content {
                 display: none;
                 position: absolute;
+                width: 0%;
+                height: 0%;
+                visibility: hidden;
+                transition: width 1s height 1s;
+            }
+            &__content.display {
                 width: 100%;
                 height: 100%;
-                visibility: hidden;
-            }
-            .display {
                 display: flex;
                 visibility: visible;
+                align-items: flex-end;
+            } 
+        }
+        .about.active {
+            background-color: var(--color-pale-70);
+        }
+        .skills.active {
+            background-color: var(--color-azure-70);
+        }
+        .education.active {
+            background-color: var(--color-neon-pink-70);
+        }
+        .work.active {
+            background-color: var(--color-blue-70);
+        }
+        .portfolio.active {
+            background-color: var(--color-pink-70);
+        }
+        .contact.active {
+            background-color: var(--color-yellow-70);
+        }
+        .active {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 80px;
+            border: var(--border-black);
+            outline: 80px solid var(--color-body);
+            &:hover {
+                cursor: default;
+            }
+        }
+        .skills, .education, .work, .portfolio, .contact {
+            &__container {
+                padding: 36px;
+                margin: 50px;
+                display: grid;
+                position: relative;
+                bottom: 0;
+                width: 100%;
             }
         }
     }
-    .skills, .education, .work, .portfolio, .contact {
-        &__container {
-            padding: 36px;
-            margin: 50px;
-            display: grid;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    }
+    
 }
 
 
@@ -654,15 +662,19 @@ ul, li {
                 border-width: 3px 6px 6px 6px;
                 border-radius: 0 0 80px 80px;
             }
+            .active {
+                border-radius: 80px;
+                border: var(--border-black);
+            }
             .about, .skills, .education, .work, .portfolio, .contact {
-                &-active {
-                    &__title {
-                        margin-left: auto; //check!!!!!!!!!!!!!!!
-                        margin-right: auto;
-                        //left: 0;
-                        right: 0;
-                        top: 100px;
-                    }
+                &__title.active-title {
+                    width: 100%;
+                    text-align: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                    left: 0;
+                    right: 0;
+                    top: 100px;
                 }
                 &__container {
                     margin: 20px 20px 40px 20px;

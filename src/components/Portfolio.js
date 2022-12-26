@@ -23,9 +23,9 @@ export default function Portfolio() {
         )
     })
     return (
-        <section className={show ? "portfolio-active" : "portfolio"} onClick={open}>
-            <h2 className={show ? "portfolio-active__title" : "portfolio__title"}>Portfolio</h2>
-            <div className={`portfolio-active__content ${show && "display"}`}>
+        <section className={`portfolio ${show && "active"}`} onClick={open}>
+            <h2 className={`portfolio__title ${show && "active-title"}`}>Portfolio</h2>
+            <div className={`portfolio__content ${show && "display"}`}>
                 <button className="portfolio__exit btn-round btn-exit" onClick={close}>
                     <i className="fa-solid fa-xmark"></i>
                 </button>

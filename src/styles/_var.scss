@@ -123,26 +123,6 @@
     line-height: 16px;
 }
 
-%section {
-    border-color: var(--color-black);
-    border-style: solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-%active {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 80px;
-    border: var(--border-black);
-    outline: 80px solid var(--color-body);
-    &:hover {
-        cursor: default;
-    }
-}
-
 :root {
     --color-black: #000000;
     --color-white: #ffffff;

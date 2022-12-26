@@ -22,31 +22,11 @@
   src: url(../fonts/Lato-Bold.ttf) format(truetype);
   font-weight: 500;
 }
-.app .portfolio__card__bottom__read, .app .portfolio__card__text__read, .app .portfolio__card__text .bold, .app .portfolio__card__text, .app .work__card__item__bottom, .app .education__card__year, .app .education__card__place, .app .education__card__profession, .app .skills__card__top, .app .about__long, .app .about__short {
+.app .header .portfolio__card__bottom__read, .app .header .portfolio__card__text__read, .app .header .portfolio__card__text .bold, .app .header .portfolio__card__text, .app .header .work__card__item__bottom, .app .header .education__card__year, .app .header .education__card__place, .app .header .education__card__profession, .app .header .skills__card__top, .app .header .about__long, .app .header .about__short {
   font-family: var(--font-main);
   font-size: var(--size-16);
   color: var(--color-text);
   line-height: 18px;
-}
-
-.app .about, .app .skills, .app .education, .app .work, .app .portfolio, .app .contact {
-  border-color: var(--color-black);
-  border-style: solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.app .skills-active, .app .education-active, .app .work-active, .app .portfolio-active, .app .contact-active, .app .about-active {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 80px;
-  border: var(--border-black);
-  outline: 80px solid var(--color-body);
-}
-.app .skills-active:hover, .app .education-active:hover, .app .work-active:hover, .app .portfolio-active:hover, .app .contact-active:hover, .app .about-active:hover {
-  cursor: default;
 }
 
 :root {
@@ -249,16 +229,16 @@ ul, li {
   gap: 0;
   position: relative;
 }
-.app .about {
+.app .header .about {
   background-color: var(--color-pale-40);
   border-width: 6px 3px 3px 6px;
   border-radius: 80px 0 0 0;
 }
-.app .about:hover {
+.app .header .about:hover {
   cursor: pointer;
   background-color: var(--color-pale-70);
 }
-.app .about__more {
+.app .header .about__more {
   background-color: var(--color-yellow-100);
   position: absolute;
   margin-top: auto;
@@ -269,29 +249,29 @@ ul, li {
   z-index: 3;
   transition: right 1s;
 }
-.app .about__more:hover {
+.app .header .about__more:hover {
   background-color: var(--color-yellow-70);
 }
-.app .about__container {
+.app .header .about__container {
   padding: 86px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-.app .about__img {
+.app .header .about__img {
   width: 50%;
   padding: 50px;
   align-self: center;
   justify-self: center;
 }
-.app .about__short {
+.app .header .about__short {
   width: 28%;
   font-weight: var(--weight-regular);
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.app .about__long {
+.app .header .about__long {
   font-weight: var(--weight-regular);
   position: absolute;
   right: 0px;
@@ -307,47 +287,44 @@ ul, li {
   transform: scale(0.7);
   transition: all 1s;
 }
-.app .about__long p {
+.app .header .about__long p {
   overflow: hidden;
 }
-.app .about-active {
-  background-color: var(--color-pale-70);
-}
-.app .about-active .visible {
+.app .header .about .visible {
   padding: 86px;
   outline: var(--border-black);
   width: 60% !important;
   transform: scale(1) !important;
 }
-.app .skills {
+.app .header .skills {
   background-color: var(--color-azure-40);
   border-width: 6px 3px 3px 3px;
 }
-.app .skills:hover {
+.app .header .skills:hover {
   cursor: pointer;
   background-color: var(--color-azure-70);
 }
-.app .skills__container {
+.app .header .skills__container {
   grid-template-columns: repeat(3, 1fr);
   gap: 46px;
 }
-.app .skills__card {
+.app .header .skills__card {
   display: flex;
   flex-direction: column;
   height: 46px;
   width: 100%;
   justify-content: space-between;
 }
-.app .skills__card__top {
+.app .header .skills__card__top {
   display: flex;
   justify-content: space-between;
   font-weight: var(--weight-regular);
 }
-.app .skills__card__bottom {
+.app .header .skills__card__bottom {
   width: 100%;
   position: relative;
 }
-.app .skills__card__bottom__bar-percent {
+.app .header .skills__card__bottom__bar-percent {
   position: absolute;
   top: 0;
   left: 0;
@@ -356,37 +333,27 @@ ul, li {
   border: var(--border-black-mobile);
   border-radius: 8px;
 }
-.app .skills__card__bottom__bar-bg {
+.app .header .skills__card__bottom__bar-bg {
   background-color: var(--color-body);
   border: var(--border-black-half);
   border-radius: 8px;
   width: 100%;
   height: 14px;
 }
-.app .skills-active {
-  background-color: var(--color-azure-70);
-}
-.app .skills-active__content, .app .education-active__content, .app .work-active__content, .app .portfolio-active__content, .app .contact-active__content {
-  display: flex;
-  align-items: flex-end;
-}
-.app .education-active {
-  background-color: var(--color-neon-pink-70) !important;
-}
-.app .education {
+.app .header .education {
   background-color: var(--color-neon-pink-40);
   border-width: 6px 6px 3px 3px;
   border-radius: 0 80px 0 0;
 }
-.app .education:hover {
+.app .header .education:hover {
   cursor: pointer;
   background-color: var(--color-neon-pink-70);
 }
-.app .education__container {
+.app .header .education__container {
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
-.app .education__card {
+.app .header .education__card {
   background-color: var(--color-scroll);
   display: flex;
   flex-direction: column;
@@ -395,42 +362,39 @@ ul, li {
   border: var(--border-black-thin);
   padding: 12px;
 }
-.app .education__card__profession {
+.app .header .education__card__profession {
   font-weight: var(--weight-medium);
   padding-bottom: 26px;
 }
-.app .education__card__school {
+.app .header .education__card__school {
   font-family: var(--font-main);
   font-size: var(--size-20);
   font-weight: var(--weight-bold);
   color: var(--color-text);
   line-height: 24px;
 }
-.app .education__card__place {
+.app .header .education__card__place {
   font-weight: var(--weight-light);
 }
-.app .education__card__year {
+.app .header .education__card__year {
   padding-top: 26px;
   text-align: right;
   font-weight: var(--weight-light);
 }
-.app .work-active {
-  background-color: var(--color-blue-70);
-}
-.app .work {
+.app .header .work {
   background-color: var(--color-blue-40);
   border-width: 3px 3px 6px 6px;
   border-radius: 0 0 0 80px;
 }
-.app .work:hover {
+.app .header .work:hover {
   cursor: pointer;
   background-color: var(--color-blue-70);
 }
-.app .work__container {
+.app .header .work__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
 }
-.app .work__card {
+.app .header .work__card {
   background-color: var(--color-scroll);
   display: flex;
   flex-direction: column;
@@ -439,14 +403,14 @@ ul, li {
   border: var(--border-black-thin);
   padding: 12px;
 }
-.app .work__card__profession {
+.app .header .work__card__profession {
   font-family: var(--font-main);
   font-size: var(--size-20);
   font-weight: var(--weight-bold);
   color: var(--color-text);
   line-height: 24px;
 }
-.app .work__card__items {
+.app .header .work__card__items {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -454,38 +418,35 @@ ul, li {
   margin-right: auto;
   width: 75%;
 }
-.app .work__card__item {
+.app .header .work__card__item {
   display: flex;
   flex-direction: column;
 }
-.app .work__card__item__top {
+.app .header .work__card__item__top {
   font-family: var(--font-main);
   font-size: var(--size-18);
   font-weight: var(--weight-medium);
   color: var(--color-text);
   line-height: 22px;
 }
-.app .work__card__item__bottom {
+.app .header .work__card__item__bottom {
   display: flex;
   justify-content: space-between;
   font-weight: var(--weight-light);
 }
-.app .portfolio-active {
-  background-color: var(--color-pink-70);
-}
-.app .portfolio {
+.app .header .portfolio {
   background-color: var(--color-pink-40);
   border-width: 3px 3px 6px 3px;
 }
-.app .portfolio:hover {
+.app .header .portfolio:hover {
   cursor: pointer;
   background-color: var(--color-pink-70);
 }
-.app .portfolio__container {
+.app .header .portfolio__container {
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
 }
-.app .portfolio__card {
+.app .header .portfolio__card {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -493,16 +454,16 @@ ul, li {
   border-radius: 20px;
   border: var(--border-black-thin);
 }
-.app .portfolio__card .left {
+.app .header .portfolio__card .left {
   right: 90%;
 }
-.app .portfolio__card .move {
+.app .header .portfolio__card .move {
   width: 100%;
   right: 0 !important;
   transform: scale(1);
   position: absolute;
 }
-.app .portfolio__card__btn {
+.app .header .portfolio__card__btn {
   position: absolute;
   right: -30px;
   bottom: -30px;
@@ -510,10 +471,10 @@ ul, li {
   transform: scale(0.6);
   transition: right 1s;
 }
-.app .portfolio__card__btn:hover {
+.app .header .portfolio__card__btn:hover {
   background-color: var(--color-yellow-70);
 }
-.app .portfolio__card__text {
+.app .header .portfolio__card__text {
   width: 0;
   height: 100%;
   transform: scale(0);
@@ -532,23 +493,23 @@ ul, li {
   overflow: hidden;
   font-weight: var(--weight-medium);
 }
-.app .portfolio__card__text .bold {
+.app .header .portfolio__card__text .bold {
   font-weight: var(--weight-bold);
 }
-.app .portfolio__card__text__read {
+.app .header .portfolio__card__text__read {
   font-weight: var(--weight-light);
 }
-.app .portfolio__card__top {
+.app .header .portfolio__card__top {
   padding: 18px;
 }
-.app .portfolio__card__top__link {
+.app .header .portfolio__card__top__link {
   position: relative;
   width: 100%;
 }
-.app .portfolio__card__top__link:hover .portfolio__card__top__demo {
+.app .header .portfolio__card__top__link:hover .portfolio__card__top__demo {
   visibility: visible;
 }
-.app .portfolio__card__top__demo {
+.app .header .portfolio__card__top__demo {
   font-family: var(--font-main);
   font-size: var(--size-14);
   font-weight: var(--weight-medium);
@@ -562,7 +523,7 @@ ul, li {
   background-color: var(--color-yellow-70);
   visibility: hidden;
 }
-.app .portfolio__card__top__img {
+.app .header .portfolio__card__top__img {
   width: 100%;
   height: 140px;
   -o-object-fit: cover;
@@ -570,41 +531,45 @@ ul, li {
   border-radius: 10px;
   filter: grayscale(0.7);
 }
-.app .portfolio__card__top__img:hover {
+.app .header .portfolio__card__top__img:hover {
   cursor: pointer;
   filter: grayscale(0);
 }
-.app .portfolio__card__bottom {
+.app .header .portfolio__card__bottom {
   padding: 18px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.app .portfolio__card__bottom__title {
+.app .header .portfolio__card__bottom__title {
   font-family: var(--font-main);
   font-size: var(--size-20);
   font-weight: var(--weight-bold);
   color: var(--color-text);
   line-height: 24px;
 }
-.app .portfolio__card__bottom__read {
+.app .header .portfolio__card__bottom__read {
   align-self: flex-end;
   padding: 0 12px;
   font-weight: var(--weight-light);
 }
-.app .contact-active {
-  background-color: var(--color-yellow-70);
-}
-.app .contact {
+.app .header .contact {
   background-color: var(--color-yellow-40);
   border-width: 3px 6px 6px 3px;
   border-radius: 0 0 80px 0;
 }
-.app .contact:hover {
+.app .header .contact:hover {
   cursor: pointer;
   background-color: var(--color-yellow-70);
 }
-.app .about__title, .app .skills__title, .app .education__title, .app .work__title, .app .portfolio__title, .app .contact__title {
+.app .header .about, .app .header .skills, .app .header .education, .app .header .work, .app .header .portfolio, .app .header .contact {
+  border-color: var(--color-black);
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app .header .about__title, .app .header .skills__title, .app .header .education__title, .app .header .work__title, .app .header .portfolio__title, .app .header .contact__title {
   font-family: var(--font-secondary);
   font-size: var(--size-48);
   font-weight: var(--weight-medium);
@@ -612,29 +577,56 @@ ul, li {
   line-height: 125%;
   text-transform: uppercase;
 }
-.app .about-active__title, .app .skills-active__title, .app .education-active__title, .app .work-active__title, .app .portfolio-active__title, .app .contact-active__title {
-  font-family: var(--font-secondary);
-  font-size: var(--size-48);
-  font-weight: var(--weight-medium);
-  color: var(--color-text);
-  line-height: 125%;
-  text-transform: uppercase;
+.app .header .about__title.active-title, .app .header .skills__title.active-title, .app .header .education__title.active-title, .app .header .work__title.active-title, .app .header .portfolio__title.active-title, .app .header .contact__title.active-title {
   position: absolute;
   left: 86px;
   top: 120px;
 }
-.app .about-active__content, .app .skills-active__content, .app .education-active__content, .app .work-active__content, .app .portfolio-active__content, .app .contact-active__content {
+.app .header .about__content, .app .header .skills__content, .app .header .education__content, .app .header .work__content, .app .header .portfolio__content, .app .header .contact__content {
   display: none;
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  visibility: hidden;
+  transition: width 1s height 1s;
+}
+.app .header .about__content.display, .app .header .skills__content.display, .app .header .education__content.display, .app .header .work__content.display, .app .header .portfolio__content.display, .app .header .contact__content.display {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  visibility: visible;
+  align-items: flex-end;
+}
+.app .header .about.active {
+  background-color: var(--color-pale-70);
+}
+.app .header .skills.active {
+  background-color: var(--color-azure-70);
+}
+.app .header .education.active {
+  background-color: var(--color-neon-pink-70);
+}
+.app .header .work.active {
+  background-color: var(--color-blue-70);
+}
+.app .header .portfolio.active {
+  background-color: var(--color-pink-70);
+}
+.app .header .contact.active {
+  background-color: var(--color-yellow-70);
+}
+.app .header .active {
   position: absolute;
   width: 100%;
   height: 100%;
-  visibility: hidden;
+  border-radius: 80px;
+  border: var(--border-black);
+  outline: 80px solid var(--color-body);
 }
-.app .about-active .display, .app .skills-active .display, .app .education-active .display, .app .work-active .display, .app .portfolio-active .display, .app .contact-active .display {
-  display: flex;
-  visibility: visible;
+.app .header .active:hover {
+  cursor: default;
 }
-.app .skills__container, .app .education__container, .app .work__container, .app .portfolio__container, .app .contact__container {
+.app .header .skills__container, .app .header .education__container, .app .header .work__container, .app .header .portfolio__container, .app .header .contact__container {
   padding: 36px;
   margin: 50px;
   display: grid;
@@ -802,9 +794,16 @@ ul, li {
     border-width: 3px 6px 6px 6px;
     border-radius: 0 0 80px 80px;
   }
-  .app .header .about-active__title, .app .header .skills-active__title, .app .header .education-active__title, .app .header .work-active__title, .app .header .portfolio-active__title, .app .header .contact-active__title {
+  .app .header .active {
+    border-radius: 80px;
+    border: var(--border-black);
+  }
+  .app .header .about__title.active-title, .app .header .skills__title.active-title, .app .header .education__title.active-title, .app .header .work__title.active-title, .app .header .portfolio__title.active-title, .app .header .contact__title.active-title {
+    width: 100%;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    left: 0;
     right: 0;
     top: 100px;
   }

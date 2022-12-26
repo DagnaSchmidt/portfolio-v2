@@ -14,9 +14,9 @@ export default function About() {
         setAbout(!about)
     }
     return (
-        <section className={show ? "about-active" : "about"} onClick={open}>
-            <h2 className={show ? "about-active__title" : "about__title"}>About</h2>
-            <div className={`about-active__content ${show && "display"}`}>
+        <section className={`about ${show && "active"}`} onClick={open}>
+            <h2 className={`about__title ${show && "active-title"}`}>About</h2>
+            <div className={`about__content ${show && "display"}`}>
                 <button className="about__exit btn-round btn-exit" onClick={close}>
                     <i className="fa-solid fa-xmark"></i>
                 </button>
