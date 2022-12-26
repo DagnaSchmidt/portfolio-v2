@@ -112,6 +112,11 @@
 }
 
 * {
+  scrollbar-color: var(--color-scroll) var(--color-scroll);
+  width: thin;
+}
+
+* {
   box-sizing: border-box;
 }
 

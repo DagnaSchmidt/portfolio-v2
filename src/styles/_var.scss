@@ -207,3 +207,8 @@
     border: var(--border-black-half);
     border-radius: 8px;
 }
+
+* {
+    scrollbar-color: var(--color-scroll) var(--color-scroll);
+    width: thin;
+}
