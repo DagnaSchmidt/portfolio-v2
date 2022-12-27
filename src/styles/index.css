@@ -569,11 +569,11 @@ ul, li {
   background-color: var(--color-yellow-70);
 }
 .app .header .contact__card {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 48px;
 }
 .app .header .contact__card__form, .app .header .contact__card__message {
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -798,6 +798,14 @@ ul, li {
   .app .header .portfolio__container {
     grid-template-columns: repeat(1, 1fr);
   }
+  .app .header .contact__container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 60%;
+  }
+  .app .header .contact__card {
+    flex-direction: column-reverse;
+  }
 }
 @media screen and (max-width: 480px) {
   .app .btn-round {
@@ -861,6 +869,34 @@ ul, li {
   .app .header .contact {
     border-width: 3px 6px 6px 6px;
     border-radius: 0 0 80px 80px;
+  }
+  .app .header .contact__card__send {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-light);
+    color: var(--color-text);
+    line-height: 16px;
+  }
+  .app .header .contact__card__label {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    line-height: 16px;
+  }
+  .app .header .contact__card__message {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-medium);
+    color: var(--color-text);
+    line-height: 16px;
+  }
+  .app .header .contact__card__message .span {
+    font-family: var(--font-main);
+    font-size: var(--size-14);
+    font-weight: var(--weight-light);
+    color: var(--color-text);
+    line-height: 16px;
   }
   .app .header .active {
     border-radius: 80px;

@@ -426,10 +426,10 @@ ul, li {
                 background-color: var(--color-yellow-70);
             }
             &__card {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                display: flex;
                 gap: 48px;
                 &__form, &__message {
+                    width: 100%;
                     position: relative;
                     display: flex;
                     flex-direction: column;
@@ -652,6 +652,16 @@ ul, li {
                     grid-template-columns: repeat(1, 1fr);
                 }
             }
+            .contact {
+                &__container {
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    max-height: 60%;
+                }
+                &__card {
+                    flex-direction: column-reverse;
+                }
+            }
         }
     }
 }
@@ -716,6 +726,20 @@ ul, li {
             .contact {
                 border-width: 3px 6px 6px 6px;
                 border-radius: 0 0 80px 80px;
+                &__card {
+                    &__send {
+                        @include body-S-light;
+                    }
+                    &__label {
+                        @include body-S-medium;
+                    }
+                    &__message {
+                        @include body-S-medium;
+                        .span {
+                            @include body-S-light;
+                        }
+                    }
+                }
             }
             .active {
                 border-radius: 80px;
