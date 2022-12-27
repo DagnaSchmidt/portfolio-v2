@@ -6,7 +6,6 @@ import Education from './components/Education';
 import Portfolio from './components/Portfolio';
 import Skills from './components/Skills';
 import Work from './components/Work';
-import './styles/normalize.css';
 import './styles/index.css';
 
 function App() {
