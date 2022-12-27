@@ -14,6 +14,7 @@ export default function Education() {
     const cards = data.map(item => {
         return (
             <CardEducation
+                key={item.id}
                 profession={item.profession}
                 school={item.school}
                 place={item.place}

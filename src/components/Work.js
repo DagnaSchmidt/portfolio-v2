@@ -14,6 +14,7 @@ export default function Work() {
     const cards = data.map(item => {
         return (
             <CardWork
+                key={item.id}
                 profession={item.profession}
                 companies={item.companies}
             />
