@@ -600,6 +600,7 @@ ul, li {
   height: 36px;
   padding: 0 12px;
   border-bottom: var(--border-black-half);
+  background-color: transparent;
 }
 .app .header .contact__card__input:hover {
   cursor: text;

@@ -452,6 +452,7 @@ ul, li {
                     height: 36px;
                     padding: 0 12px;
                     border-bottom: var(--border-black-half);
+                    background-color: transparent;
                     &:hover {
                         cursor: text;
                         background-color: var(--color-yellow-70);
