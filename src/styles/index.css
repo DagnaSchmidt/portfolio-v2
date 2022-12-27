@@ -227,7 +227,6 @@ ul, li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  position: relative;
 }
 .app .header .about {
   background-color: var(--color-pale-40);
@@ -246,7 +245,7 @@ ul, li {
   top: 0;
   bottom: 0;
   right: -40px;
-  z-index: 3;
+  z-index: 5 !important;
   transition: right 1s;
 }
 .app .header .about__more:hover {
@@ -481,6 +480,7 @@ ul, li {
   background-color: var(--color-yellow-70);
 }
 .app .header .portfolio__card__text {
+  transform-origin: bottom left;
   width: 0;
   height: 100%;
   transform: scale(0);
@@ -637,6 +637,17 @@ ul, li {
   justify-content: center;
   align-items: center;
 }
+.app .header .about.active, .app .header .skills.active, .app .header .education.active, .app .header .work.active, .app .header .portfolio.active, .app .header .contact.active {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 80px;
+  border: var(--border-black);
+  outline: 80px solid var(--color-body);
+}
+.app .header .about.active:hover, .app .header .skills.active:hover, .app .header .education.active:hover, .app .header .work.active:hover, .app .header .portfolio.active:hover, .app .header .contact.active:hover {
+  cursor: default;
+}
 .app .header .about__title, .app .header .skills__title, .app .header .education__title, .app .header .work__title, .app .header .portfolio__title, .app .header .contact__title {
   font-family: var(--font-secondary);
   font-size: var(--size-48);
@@ -651,18 +662,18 @@ ul, li {
   top: 120px;
 }
 .app .header .about__content, .app .header .skills__content, .app .header .education__content, .app .header .work__content, .app .header .portfolio__content, .app .header .contact__content {
+  transition: all 1s;
   display: none;
-  position: absolute;
   width: 0%;
   height: 0%;
-  visibility: hidden;
-  transition: width 1s height 1s;
+  transform: scale(0);
 }
-.app .header .about__content.display, .app .header .skills__content.display, .app .header .education__content.display, .app .header .work__content.display, .app .header .portfolio__content.display, .app .header .contact__content.display {
+.app .header .about .display, .app .header .skills .display, .app .header .education .display, .app .header .work .display, .app .header .portfolio .display, .app .header .contact .display {
+  position: absolute;
+  transform: scale(1);
   width: 100%;
   height: 100%;
   display: flex;
-  visibility: visible;
   align-items: flex-end;
 }
 .app .header .about.active {
@@ -682,17 +693,6 @@ ul, li {
 }
 .app .header .contact.active {
   background-color: var(--color-yellow-70);
-}
-.app .header .active {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 80px;
-  border: var(--border-black);
-  outline: 80px solid var(--color-body);
-}
-.app .header .active:hover {
-  cursor: default;
 }
 .app .header .skills__container, .app .header .education__container, .app .header .work__container, .app .header .portfolio__container, .app .header .contact__container {
   padding: 36px;
