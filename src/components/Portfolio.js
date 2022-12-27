@@ -14,6 +14,7 @@ export default function Portfolio() {
     const cards = data.map(item => {
         return (
             <CardPortfolio
+                key={item.id}
                 img={item.img}
                 description={item.description}
                 programs={item.programs}

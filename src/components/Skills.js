@@ -14,6 +14,7 @@ export default function Skills() {
     const cards = data.map(item => {
         return (
             <CardSkills
+                key={item.id}
                 name={item.name}
                 percent={item.percent}
             />
