@@ -429,7 +429,7 @@ ul, li {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 48px;
-                &__form {
+                &__form, &__message {
                     position: relative;
                     display: flex;
                     flex-direction: column;
@@ -469,6 +469,12 @@ ul, li {
                     transition: right 1s;
                     &:hover {
                         background-color: var(--color-yellow-70);
+                    }
+                }
+                &__message {
+                    @include body-L-medium;
+                    .span {
+                        @include body-light;
                     }
                 }
             }

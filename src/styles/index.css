@@ -22,7 +22,7 @@
   src: url(../fonts/Lato-Bold.ttf) format(truetype);
   font-weight: 500;
 }
-.app .header .contact__card__send, .app .header .portfolio__card__bottom__read, .app .header .portfolio__card__text__read, .app .header .portfolio__card__text .bold, .app .header .portfolio__card__text, .app .header .work__card__item__bottom, .app .header .education__card__year, .app .header .education__card__place, .app .header .education__card__profession, .app .header .skills__card__top, .app .header .about__long, .app .header .about__short {
+.app .header .contact__card__message .span, .app .header .contact__card__send, .app .header .portfolio__card__bottom__read, .app .header .portfolio__card__text__read, .app .header .portfolio__card__text .bold, .app .header .portfolio__card__text, .app .header .work__card__item__bottom, .app .header .education__card__year, .app .header .education__card__place, .app .header .education__card__profession, .app .header .skills__card__top, .app .header .about__long, .app .header .about__short {
   font-family: var(--font-main);
   font-size: var(--size-16);
   color: var(--color-text);
@@ -573,7 +573,7 @@ ul, li {
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
 }
-.app .header .contact__card__form {
+.app .header .contact__card__form, .app .header .contact__card__message {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -618,6 +618,16 @@ ul, li {
 }
 .app .header .contact__card__btn:hover {
   background-color: var(--color-yellow-70);
+}
+.app .header .contact__card__message {
+  font-family: var(--font-main);
+  font-size: var(--size-18);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  line-height: 22px;
+}
+.app .header .contact__card__message .span {
+  font-weight: var(--weight-light);
 }
 .app .header .about, .app .header .skills, .app .header .education, .app .header .work, .app .header .portfolio, .app .header .contact {
   border-color: var(--color-black);
