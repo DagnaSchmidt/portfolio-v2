@@ -2,6 +2,7 @@ import React from "react";
 import '../styles/index.css';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+const KEY = process.env.REACT_APP_CONTACT_KEY
 
 export default function Contact() {
     const form = useRef();
@@ -9,7 +10,7 @@ export default function Contact() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        emailjs.sendForm('service_5twbmfd', 'template_ezp6l61', form.current, 'aIRQjqti4cEjOruCg')
+        emailjs.sendForm('service_5twbmfd', 'template_ezp6l61', form.current, KEY)
           .then((result) => {
               console.log(result.text);
               setMessage(true)
