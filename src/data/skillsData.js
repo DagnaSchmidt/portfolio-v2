@@ -17,12 +17,12 @@ const data = [
     {
         id: 4,
         name: "JavaScript",
-        percent: 60,
+        percent: 70,
     },
     {
         id: 5,
         name: "React",
-        percent: 50,
+        percent: 80,
     },
     {
         id: 6,
@@ -41,7 +41,7 @@ const data = [
     },
     {
         id: 9,
-        name: "Adobe Illustrator",
+        name: "React Native",
         percent: 50,
     }
 ]
