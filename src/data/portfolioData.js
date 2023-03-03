@@ -1,11 +1,11 @@
 const data = [
     {
         id: 1,
-        img: "portfolio-foto.jpg",
+        img: "analog.jpg",
         description: "Analog photography portfolio project, made for myself, fully responsive.",
-        programs: "Figma, HTML, CSS, SASS, JavaScript",
+        programs: "React, JavaScript, SCSS",
         title: "Analog Portfolio",
-        link: "https://dagna-schmidt-photography.netlify.app/"
+        link: "https://dschmidt-photography.netlify.app"
     },
     {
         id: 2,
@@ -17,11 +17,11 @@ const data = [
     },
     {
         id: 3,
-        img: "portfolio-v1.jpg",
-        description: "First version of my portfolio.",
-        programs: "Figma, HTML, CSS, SASS, JavaScript",
-        title: "First Portfolio",
-        link: "https://dagna-schmidt.netlify.app/"
+        img: "dev.jpg",
+        description: "Website with widgets (calculator, weather forecast, notes and more). All data stored only in local storage. Sign up without email authentication (user can use fake email). Not responsive.",
+        programs: "Figma, React, JavaScript, SCSS",
+        title: "DevDash",
+        link: "https://dev-dash.netlify.app"
     }
 ]
 
