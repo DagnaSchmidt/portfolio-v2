@@ -25,9 +25,9 @@ export default function About() {
                 </button>
                 <div className="about__container">
                     <div className="about__short">
-                        <p>Junior Web Developer located in Goteborg, Sweden.</p>
-                        <p>Experienced in Interior Design, 
-                        Jewelry Design and as a Dental Technician. 
+                        <p>Junior Full-stack located in Goteborg, Sweden.</p>
+                        <p>Experienced in Interior Design, UI design, 
+                        Jewelry Design and as a Dental Technician.
                         With passion for Analog Photography.</p>
                         <p>Professional athlete, multimedalist 
                         of Polish Championships, former member 
@@ -36,7 +36,7 @@ export default function About() {
                     <img className="about__img" src={require(`../images/portret.png`)} alt="my profile" />
                 </div>
                 <div className={`about__long ${about && "visible"}`}>
-                    <p>My name is Dagna Schmidt, I am 32 years old and have been living in Göteborg, Sweden for just over a year.</p>
+                    <p>My name is Dagna Schmidt, I am 33 years old and have been living in Göteborg, Sweden for just over a two years.</p>
                     <p>During eleven years of living in Warsaw, I was gaining my education and professional experience. 
                     As a very curious person I have worked and developed in many different fields and professions. 
                     They all had one thing in common: creating beautiful things that give the user a unique experience.</p>
@@ -44,6 +44,10 @@ export default function About() {
                     in love with never ending process of self developing.</p>
                     <p>My experience as a professional athlete learned me to perform my best on stressful situations. 
                     I am also used to have hard to achieve, long-term goals.</p>
+                    <p>Looking forward, I aspire to be part of teams working towards creating innovative solutions 
+                    leveraging modern technologies. Whether developing web or mobile applications, I always strive to 
+                    deliver high-quality output while staying up-to-date with the latest design trends, coding practices, 
+                    and emerging tools.</p>
                 </div>
             </div>
         </section>

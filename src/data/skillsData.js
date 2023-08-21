@@ -1,48 +1,33 @@
 const data = [
     {
         id: 1,
-        name: "HTML",
-        percent: 90,
+        title: 'Front-end',
+        skills: [
+            'HTML, CSS, SASS, Tailwind',
+            'JavaScript, TypeScript',
+            'Rect, React Native, Redux, Axios',
+            'REST api',
+            'UI design, Figma',
+            'Jest, Cypress, Lint'
+        ]
     },
     {
         id: 2,
-        name: "CSS",
-        percent: 90,
+        title: 'Back-end',
+        skills: [
+            'Node.JS, Express, Python, C#',
+            'mySQL, MongoDB, Firebase / Firestore'
+        ]
     },
     {
         id: 3,
-        name: "SASS",
-        percent: 90,
-    },
-    {
-        id: 4,
-        name: "JavaScript",
-        percent: 70,
-    },
-    {
-        id: 5,
-        name: "React",
-        percent: 80,
-    },
-    {
-        id: 6,
-        name: "GIT",
-        percent: 50,
-    },
-    {
-        id: 7,
-        name: "Figma",
-        percent: 80,
-    },
-    {
-        id: 8,
-        name: "UI design",
-        percent: 80,
-    },
-    {
-        id: 9,
-        name: "React Native",
-        percent: 50,
+        title: 'Others',
+        skills: [
+            'SCRUM, Agile, Trello, SOLID',
+            'GIT, Github / Bitbucket',
+            'CI/CD, pipelines',
+
+        ]
     }
 ]
 

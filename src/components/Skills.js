@@ -15,8 +15,8 @@ export default function Skills() {
         return (
             <CardSkills
                 key={item.id}
-                name={item.name}
-                percent={item.percent}
+                title={item.title}
+                skills={item.skills}
             />
         )
     })
