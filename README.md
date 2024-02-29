@@ -1,5 +1,3 @@
-Developer Portfolio
+Developer Portfolio v-2
 
 Built on: React
-
-Demo : https://dschmidt.netlify.app
